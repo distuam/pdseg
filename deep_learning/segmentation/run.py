@@ -5,9 +5,7 @@ import time
 sys.path.append("../../")
 
 
-import numpy as np
 import torch
-from deep_learning.classify import vgg
 from deep_learning.segmentation.unet import create_unet_model
 from deep_learning.segmentation.deeplab import create_deeplab_model
 from deep_learning.segmentation.fcn import create_fcn_model

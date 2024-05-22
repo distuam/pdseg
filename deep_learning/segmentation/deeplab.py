@@ -7,7 +7,7 @@ from torch import nn, Tensor
 from torch.nn import functional as F
 from torchinfo import summary
 from deep_learning.hander import segmentation_hander
-from deep_learning.classify.resnet import ResNet_50, ResNet_101
+from deep_learning.classification.resnet import ResNet_50, ResNet_101
 from deep_learning.dp_support import IntermediateLayerGetter, download_pretrained_model, load_module
 from deep_learning.hander.classification_header import ClassificationHead
 segmentation_model_urls = {
@@ -169,50 +169,3 @@ def create_deeplab_model(backbone_type, aux, num_classes, pretrained=False, clas
     if pretrained:
         load_pretrained_weights(model, segmentation_model_urls[backbone_type], num_classes)
     return model
-
-# def deeplabv3_resnet50(aux,  num_classes: int, pretrained: bool):
-#     # :param aux: 是否有辅助损失
-#     # 'resnet50_imagenet': 'https://download.pytorch.org/models/resnet50-0676ba61.pth'
-#     # 'deeplabv3_resnet50_coco': 'https://download.pytorch.org/models/deeplabv3_resnet50_coco-cd0a2569.pth'
-#     backbone = resnet.ResNet_50(pretrained=pretrained, replace_stride_with_dilation=[False, True, True])
-#     # print(backbone)
-#     out_inplanes = 2048
-#     aux_inplanes = 1024
-
-#     return_layers = {'layer4': 'out'}
-#     if aux:
-#         return_layers['layer3'] = 'aux'
-#     backbone = IntermediateLayerGetter(backbone, return_layers=return_layers)# 返回的是一个字典 backbone输出{'out':layer4输出, 'aux':layer3输出}
-
-#     aux_classifier = None
-#     # why using aux: https://github.com/pytorch/vision/issues/4292
-#     if aux:
-#         aux_classifier = FCNHead(aux_inplanes, num_classes)
-
-#     classifier = DeepLabHead(out_inplanes, num_classes)
-
-#     model = DeepLabV3(backbone, classifier, aux_classifier)
-
-#     return model
-
-# def create_deepLeb_resnet50_model(aux, num_classes,pretrained=False):
-#     model = deeplabv3_resnet50(aux=aux, num_classes=num_classes, pretrained = pretrained)                          # 创建模型
- 
-#     if pretrained:
-    
-#         model_path_name = download_pretrained_model(model_urls["resnet50"])
-#         weights_dict = load_module(model_path_name)    # 字典模式导入预训练权重,还未载入模型，方便先判断是否删除某些权重
- 
-#         """ # 官方提供的预训练权重是21类(包括背景)
-#             # 如果训练自己的数据集，将和类别相关的权重删除，防止权重shape不一致报错"""
-#         if num_classes != 21:                                                       # 官方提供的预训练权重是21类(包括背景)
-#             for k in list(weights_dict.keys()):                                     # 如果训练自己的数据集，将和类别相关的权重删除，防止权重shape不一致报错
-#                 if "classifier.4" in k:                                             # classifier.4是关于类别先关的权重，删除之
-#                     del weights_dict[k]
- 
-#         missing_keys, unexpected_keys = model.load_state_dict(weights_dict, strict=False)   # 载入权重
-#         if len(missing_keys) != 0 or len(unexpected_keys) != 0:
-#             print("missing_keys: ", missing_keys)
-#             print("unexpected_keys: ", unexpected_keys)
-
-#     return model

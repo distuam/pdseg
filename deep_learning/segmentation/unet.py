@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from deep_learning.dp_support import IntermediateLayerGetter
-from deep_learning.classify.vgg import vgg16,vgg19
+from deep_learning.classification.vgg import vgg16,vgg19
 from deep_learning.hander.classification_header import ClassificationHead
 from torch import flatten
 

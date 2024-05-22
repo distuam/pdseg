@@ -8,10 +8,10 @@ import torch
 from torch import nn, Tensor
 from torch.nn import functional as F
 from deep_learning.hander import segmentation_hander
-from deep_learning.classify.resnet import ResNet_50, ResNet_101, segmentation_model_urls
+from deep_learning.classification.resnet import ResNet_50, ResNet_101, segmentation_model_urls
 from deep_learning.dp_support import IntermediateLayerGetter, download_pretrained_model, load_module
 from deep_learning.hander.classification_header import ClassificationHead
-from deep_learning.classify.vgg import vgg16,vgg19
+from deep_learning.classification.vgg import vgg16,vgg19
 from torch import flatten
 #https://blog.csdn.net/weixin_43500354/article/details/124867082
 
