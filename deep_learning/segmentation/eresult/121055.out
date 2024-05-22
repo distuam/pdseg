@@ -1,0 +1,30 @@
+running with Ivan deep learning work
+SLURM job ID: 121055
+dataset: ../../data/project2024/
+预训练模型已经存在，无需下载。
+预训练模型已经存在，无需下载。
+missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
+unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
+Task name: fcn  num_workers: 4  number of classes: 6
+Using device: cuda
+Using version: 2.2.1
+
+Device name: Tesla P100-PCIE-16GB
+Total memory: 15.8992919921875 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+optimizer name: sgd
+loss name:  ce
+Epoch 1/1
+----------
+  0%|          | 0/91 [00:00<?, ?it/s]  4%|▍         | 4/91 [00:05<02:08,  1.48s/it] 11%|█         | 10/91 [00:11<01:29,  1.10s/it] 18%|█▊        | 16/91 [00:17<01:16,  1.02s/it] 24%|██▍       | 22/91 [00:22<01:07,  1.02it/s] 31%|███       | 28/91 [00:28<01:00,  1.04it/s] 37%|███▋      | 34/91 [00:33<00:54,  1.05it/s] 44%|████▍     | 40/91 [00:39<00:48,  1.06it/s] 51%|█████     | 46/91 [00:44<00:42,  1.06it/s] 57%|█████▋    | 52/91 [00:50<00:36,  1.07it/s] 64%|██████▎   | 58/91 [00:56<00:30,  1.07it/s] 70%|███████   | 64/91 [01:01<00:25,  1.07it/s] 77%|███████▋  | 70/91 [01:07<00:19,  1.07it/s] 84%|████████▎ | 76/91 [01:12<00:14,  1.07it/s] 90%|█████████ | 82/91 [01:18<00:08,  1.07it/s] 97%|█████████▋| 88/91 [01:24<00:02,  1.07it/s]100%|██████████| 91/91 [01:26<00:00,  1.05it/s]
+train Loss: 1.510349 Acc: 56.214558, Memory allocated: 0.41 GB, Max memory allocated: 8.93 GB
+train_color_map: dict_keys([0, 1, 2, 4, 3, 5])
+  0%|          | 0/16 [00:00<?, ?it/s] 94%|█████████▍| 15/16 [00:05<00:00,  2.94it/s]100%|██████████| 16/16 [00:05<00:00,  2.92it/s]
+val Loss: 1.131051 Acc: 81.911284, Memory allocated: 1.31 GB, Max memory allocated: 2.17 GB
+val_color_map: dict_keys([0, 1, 2, 4, 3, 5])
+Iou per Class: [tensor(0.8191), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.136519, Mean IoU Without Background: 0.000000
+Saved new best model at epoch 1 with Mean IoU: 0.136519
+Best epoch 0, Best Loss 1.1310512721538544
+Total Training Time: 0.0 days, 0.0 hours, 1.0 minutes, 38.13 seconds
+任务成功结束

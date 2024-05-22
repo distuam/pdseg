@@ -1,0 +1,16 @@
+running with Ivan deep learning work
+Traceback (most recent call last):
+  File "/home/Student/s4715365/other_work/mmsegmentation/./tools/train.py", line 104, in <module>
+    main()
+  File "/home/Student/s4715365/other_work/mmsegmentation/./tools/train.py", line 58, in main
+    cfg = Config.fromfile(args.config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/mmengine/config/config.py", line 460, in fromfile
+    lazy_import is None and not Config._is_lazy_import(filename):
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/mmengine/config/config.py", line 1661, in _is_lazy_import
+    with open(filename, encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './configs/setr/uqsetr_uq.py'
+srun: error: a100-4: task 0: Exited with exit code 1
+任务失败或异常结束

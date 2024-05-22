@@ -1,0 +1,51 @@
+running with Ivan deep learning work
+dataset: ../../data/VOCdevkit/VOC2012/
+预训练模型已经存在，无需下载。
+预训练模型已经存在，无需下载。
+missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
+unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
+num_workers: 4
+Using device: cuda
+Using version: 2.2.1
+
+Device name: Tesla P100-PCIE-16GB
+Total memory: 15.8992919921875 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+Task name: fcn
+Epoch 1/500
+----------
+  0%|          | 0/23 [00:00<?, ?it/s]  4%|▍         | 1/23 [00:11<04:08, 11.30s/it] 22%|██▏       | 5/23 [00:20<01:04,  3.58s/it] 39%|███▉      | 9/23 [00:29<00:39,  2.84s/it] 57%|█████▋    | 13/23 [00:38<00:26,  2.62s/it] 74%|███████▍  | 17/23 [00:48<00:15,  2.54s/it] 91%|█████████▏| 21/23 [00:55<00:04,  2.32s/it]100%|██████████| 23/23 [00:58<00:00,  2.55s/it]
+train Loss: 2.0564 Acc: 52.3531, Memory allocated: 0.79 GB, Max memory allocated: 13.47 GB
+train_color_map: dict_keys([0, 38, 147, 220, 52, 34, 57, 113, 53, 15, 133, 151, 109, 72, 94, 75, 128, 19, 90, 76])
+  0%|          | 0/23 [00:00<?, ?it/s]  4%|▍         | 1/23 [00:09<03:27,  9.42s/it] 22%|██▏       | 5/23 [00:18<00:59,  3.31s/it] 39%|███▉      | 9/23 [00:26<00:35,  2.56s/it] 57%|█████▋    | 13/23 [00:34<00:23,  2.33s/it] 74%|███████▍  | 17/23 [00:42<00:13,  2.17s/it] 91%|█████████▏| 21/23 [00:49<00:04,  2.06s/it]100%|██████████| 23/23 [00:50<00:00,  2.18s/it]
+val Loss: 4956.4016 Acc: 55.5835, Memory allocated: 2.57 GB, Max memory allocated: 4.27 GB
+val_color_map: dict_keys([0, 38, 147, 220, 52, 34, 57, 113, 53, 15, 133, 151, 109, 72, 94, 75, 128, 19, 90, 76])
+Iou per Class: [tensor(0.5563), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.0021), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.0279
+Saved new best model at epoch 1 with Mean IoU: 0.0279
+Learning rate: 0.01
+Epoch 2/500
+----------
+  0%|          | 0/23 [00:00<?, ?it/s]  0%|          | 0/23 [00:18<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 416, in <module>
+    train_model(model, device, 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 199, in train_model
+    outputs = model(now_image)
+              ^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/fcn_seg.py", line 94, in forward
+    x = F.interpolate(x, size=input_shape, mode='bilinear', align_corners=False)            # 通过双线性插值还原到原少shape
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/functional.py", line 4038, in interpolate
+    return torch._C._nn.upsample_bilinear2d(input, output_size, align_corners, scale_factors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 246.00 MiB. GPU 0 has a total capacity of 15.90 GiB of which 191.75 MiB is free. Including non-PyTorch memory, this process has 15.71 GiB memory in use. Of the allocated memory 14.23 GiB is allocated by PyTorch, and 582.25 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: c4130-2: task 0: Exited with exit code 1
+任务失败或异常结束

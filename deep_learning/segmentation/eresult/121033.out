@@ -1,0 +1,4 @@
+running with Ivan deep learning work
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 121033 ON c4130-2 CANCELLED AT 2024-04-24T20:50:31 ***
+slurmstepd: error: *** STEP 121033.0 ON c4130-2 CANCELLED AT 2024-04-24T20:50:31 ***

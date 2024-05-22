@@ -1,0 +1,14 @@
+running with Ivan deep learning work
+Traceback (most recent call last):
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 14, in <module>
+    from deep_learning.classify import vgg
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/classify/vgg.py", line 1, in <module>
+    from deep_learning.dp_support import download_pretrained_model, load_module
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/dp_support.py", line 173, in <module>
+    class IntermediateLayerGetter(nn.ModuleDict):
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/dp_support.py", line 214, in IntermediateLayerGetter
+    def forward(self, x: Tensor) -> Dict[str, Tensor]:
+                         ^^^^^^
+NameError: name 'Tensor' is not defined
+srun: error: c4130-2: task 0: Exited with exit code 1
+任务失败或异常结束

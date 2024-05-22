@@ -1,0 +1,2079 @@
+running with Ivan deep learning work
+SLURM job ID: 131792
+dataset: project2024  classification task: True
+预训练模型已经存在，无需下载。
+预训练模型已经存在，无需下载。
+missing_keys:  ['classifier.4.weight', 'classifier.4.bias', 'classification_header.2.weight', 'classification_header.2.bias']
+unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
+Task name: fcn, num_workers: 4, batch_size: 24, number of classes: 6, train set ratio: 0.85
+Using device: cuda
+Using version: 2.2.1
+
+Device name: NVIDIA A100-PCIE-40GB
+Total memory: 39.39385986328125 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+optimizer name: sgd
+loss name:  ce
+Epoch 1/200
+----------
+Train Loss: 2.655344 Acc: 23.134898, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 23%|██▎       | 7/30 [00:05<00:16,  1.38it/s] 63%|██████▎   | 19/30 [00:10<00:05,  1.94it/s]100%|██████████| 30/30 [00:14<00:00,  2.03it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.61it/s]
+tensor(13205757) tensor(28130306) tensor(25193518) tensor(16142545)
+tensor(3376) tensor(878534) tensor(507572) tensor(374338)
+tensor(1368344) tensor(10610082) tensor(3965481) tensor(8012945)
+tensor(182134) tensor(8064214) tensor(523142) tensor(7723206)
+tensor(7696) tensor(1445288) tensor(1191036) tensor(261948)
+tensor(48538) tensor(2116019) tensor(1649395) tensor(515162)
+Val Classification Accuracy: 0.1429
+Statistics for each class: [0, 64, 4, 50, 0, 8], Total classifications: 126
+Val Loss: 2.552089 Acc: 44.855527, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.4694), tensor(0.0038), tensor(0.1290), tensor(0.0226), tensor(0.0053), tensor(0.0229)], Mean IoU: 0.108851, Mean IoU Without Background: 0.036732
+Saved new best model at epoch 1 with Mean IoU: 0.108851
+Learning rate: 0.0001
+Epoch 2/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 2.411935 Acc: 64.444548, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 2.271859 Acc: 75.080420, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7587), tensor(0.), tensor(0.0487), tensor(0.0003), tensor(0.0003), tensor(0.0001)], Mean IoU: 0.134689, Mean IoU Without Background: 0.009897
+Saved new best model at epoch 2 with Mean IoU: 0.134689
+Learning rate: 9.954762485004418e-05
+Epoch 3/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 2.165322 Acc: 76.801840, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.70it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 2.078271 Acc: 75.735462, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7581), tensor(0.), tensor(0.0031), tensor(0.), tensor(0.), tensor(1.7959e-06)], Mean IoU: 0.126875, Mean IoU Without Background: 0.000628
+Learning rate: 9.909502116906529e-05
+Epoch 4/200
+----------
+Train Loss: 1.982172 Acc: 77.622072, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.69it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.928986 Acc: 77.228652, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7724), tensor(0.), tensor(0.0002), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.128768, Mean IoU Without Background: 0.000039
+Learning rate: 9.864218768066691e-05
+Epoch 5/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.78it/s] 70%|███████   | 21/30 [00:10<00:04,  2.12it/s]100%|██████████| 30/30 [00:13<00:00,  2.17it/s]
+Train Loss: 1.851275 Acc: 77.761727, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.68it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.829236 Acc: 76.354980, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7636), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.127258, Mean IoU Without Background: 0.000000
+Learning rate: 9.818912309477324e-05
+Epoch 6/200
+----------
+Train Loss: 1.766101 Acc: 77.416815, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.71it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.747544 Acc: 77.067902, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7707), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.128449, Mean IoU Without Background: 0.000000
+Learning rate: 9.773582610741171e-05
+Epoch 7/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.76it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+Train Loss: 1.703766 Acc: 77.309206, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.65it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.693677 Acc: 77.439438, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7744), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.129066, Mean IoU Without Background: 0.000000
+Learning rate: 9.728229540049068e-05
+Epoch 8/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.76it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+Train Loss: 1.641450 Acc: 77.960763, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.659048 Acc: 77.050176, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7705), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.128417, Mean IoU Without Background: 0.000000
+Learning rate: 9.682852964157273e-05
+Epoch 9/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 1.604240 Acc: 77.815502, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.66it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.622273 Acc: 77.026152, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7703), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.128377, Mean IoU Without Background: 0.000000
+Learning rate: 9.637452748364287e-05
+Epoch 10/200
+----------
+Train Loss: 1.583215 Acc: 77.402999, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.59it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.594143 Acc: 77.461409, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7746), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.129102, Mean IoU Without Background: 0.000000
+Learning rate: 9.592028756487194e-05
+Epoch 11/200
+----------
+Train Loss: 1.546741 Acc: 77.680929, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.65it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.597941 Acc: 75.799403, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7580), tensor(0.), tensor(0.0003), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.126374, Mean IoU Without Background: 0.000051
+Learning rate: 9.546580850837484e-05
+Epoch 12/200
+----------
+Train Loss: 1.517891 Acc: 77.944968, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.60it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.73it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.540500 Acc: 77.723440, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7772), tensor(0.), tensor(0.0021), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.129884, Mean IoU Without Background: 0.000424
+Learning rate: 9.501108892196345e-05
+Epoch 13/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 1.508485 Acc: 77.335329, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.66it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.561722 Acc: 76.231614, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7621), tensor(0.), tensor(0.0060), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.128032, Mean IoU Without Background: 0.001208
+Learning rate: 9.455612739789428e-05
+Epoch 14/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 1.486215 Acc: 77.703495, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.67it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.538441 Acc: 76.228399, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7617), tensor(0.), tensor(0.0214), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.130520, Mean IoU Without Background: 0.004282
+Learning rate: 9.410092251261054e-05
+Epoch 15/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 1.468907 Acc: 77.835414, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.65it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.511828 Acc: 76.998026, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7688), tensor(0.), tensor(0.0426), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.135239, Mean IoU Without Background: 0.008523
+Saved new best model at epoch 15 with Mean IoU: 0.135239
+Learning rate: 9.364547282647841e-05
+Epoch 16/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 1.459102 Acc: 77.662931, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.63it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.503226 Acc: 76.360696, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7621), tensor(0.), tensor(0.0525), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.135764, Mean IoU Without Background: 0.010495
+Saved new best model at epoch 16 with Mean IoU: 0.135764
+Learning rate: 9.318977688351766e-05
+Epoch 17/200
+----------
+Train Loss: 1.437592 Acc: 78.194534, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py:107: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(1, 3, figsize=(18, 6))
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.456617 Acc: 78.435892, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7822), tensor(0.), tensor(0.0870), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.144880, Mean IoU Without Background: 0.017409
+Saved new best model at epoch 17 with Mean IoU: 0.144880
+Learning rate: 9.273383321112616e-05
+Epoch 18/200
+----------
+Train Loss: 1.418613 Acc: 78.475716, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.60it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.65it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.456331 Acc: 77.845434, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7758), tensor(0.), tensor(0.0982), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.145664, Mean IoU Without Background: 0.019636
+Saved new best model at epoch 18 with Mean IoU: 0.145664
+Learning rate: 9.227764031979817e-05
+Epoch 19/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+Train Loss: 1.401343 Acc: 78.571586, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.67it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.458613 Acc: 77.841604, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7754), tensor(0.), tensor(0.1233), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.149775, Mean IoU Without Background: 0.024652
+Saved new best model at epoch 19 with Mean IoU: 0.149775
+Learning rate: 9.182119670283639e-05
+Epoch 20/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 1.403631 Acc: 78.132783, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.67it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.407337 Acc: 78.943325, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7855), tensor(0.), tensor(0.1605), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.157663, Mean IoU Without Background: 0.032096
+Saved new best model at epoch 20 with Mean IoU: 0.157663
+Learning rate: 9.13645008360574e-05
+Epoch 21/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 1.372203 Acc: 79.152155, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.59it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.418049 Acc: 77.816954, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7725), tensor(0.), tensor(0.1979), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.161723, Mean IoU Without Background: 0.039571
+Saved new best model at epoch 21 with Mean IoU: 0.161723
+Learning rate: 9.090755117749042e-05
+Epoch 22/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.60it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+Train Loss: 1.353636 Acc: 79.542326, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.64it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.408328 Acc: 78.515661, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7810), tensor(0.), tensor(0.1777), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.159791, Mean IoU Without Background: 0.035545
+Learning rate: 9.045034616706922e-05
+Epoch 23/200
+----------
+Train Loss: 1.334358 Acc: 80.022091, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.65it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.395726 Acc: 77.887299, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7727), tensor(0.), tensor(0.2145), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.164532, Mean IoU Without Background: 0.042891
+Saved new best model at epoch 23 with Mean IoU: 0.164532
+Learning rate: 8.999288422631677e-05
+Epoch 24/200
+----------
+Train Loss: 1.331867 Acc: 79.622819, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.65it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.362671 Acc: 78.925384, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7843), tensor(0.), tensor(0.2069), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.165209, Mean IoU Without Background: 0.041383
+Saved new best model at epoch 24 with Mean IoU: 0.165209
+Learning rate: 8.953516375802286e-05
+Epoch 25/200
+----------
+Train Loss: 1.318433 Acc: 79.819968, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.77it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.61it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.362422 Acc: 78.274557, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7750), tensor(0.), tensor(0.2709), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.174318, Mean IoU Without Background: 0.054182
+Saved new best model at epoch 25 with Mean IoU: 0.174318
+Learning rate: 8.907718314591385e-05
+Epoch 26/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 1.304152 Acc: 80.095378, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.67it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.337317 Acc: 79.587101, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7906), tensor(0.), tensor(0.2313), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.170324, Mean IoU Without Background: 0.046260
+Learning rate: 8.861894075431501e-05
+Epoch 27/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 1.305824 Acc: 79.430923, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.64it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.326283 Acc: 79.166954, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7848), tensor(0.), tensor(0.2705), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.175878, Mean IoU Without Background: 0.054096
+Saved new best model at epoch 27 with Mean IoU: 0.175878
+Learning rate: 8.81604349278047e-05
+Epoch 28/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 1.284508 Acc: 79.807400, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.71it/s]
+Val Classification Accuracy: 0.4048
+Statistics for each class: [0, 0, 126, 0, 0, 0], Total classifications: 126
+Val Loss: 1.306988 Acc: 79.498969, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7894), tensor(0.), tensor(0.2467), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.172693, Mean IoU Without Background: 0.049348
+Learning rate: 8.770166399086044e-05
+Epoch 29/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 1.271334 Acc: 80.114653, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.62it/s]
+Val Classification Accuracy: 0.4127
+Statistics for each class: [0, 0, 125, 0, 0, 1], Total classifications: 126
+Val Loss: 1.313533 Acc: 78.856299, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7815), tensor(0.), tensor(0.2766), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.176344, Mean IoU Without Background: 0.055321
+Saved new best model at epoch 29 with Mean IoU: 0.176344
+Learning rate: 8.72426262474965e-05
+Epoch 30/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.79it/s] 70%|███████   | 21/30 [00:10<00:04,  2.13it/s]100%|██████████| 30/30 [00:13<00:00,  2.17it/s]
+Train Loss: 1.255232 Acc: 80.286377, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.4127
+Statistics for each class: [0, 0, 125, 0, 0, 1], Total classifications: 126
+Val Loss: 1.292046 Acc: 79.823848, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7926), tensor(0.), tensor(0.2743), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.177815, Mean IoU Without Background: 0.054867
+Saved new best model at epoch 30 with Mean IoU: 0.177815
+Learning rate: 8.678331998089283e-05
+Epoch 31/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.77it/s] 70%|███████   | 21/30 [00:10<00:04,  2.12it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+Train Loss: 1.232201 Acc: 80.786105, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.65it/s]
+Val Classification Accuracy: 0.4286
+Statistics for each class: [0, 0, 123, 0, 0, 3], Total classifications: 126
+Val Loss: 1.293030 Acc: 78.490805, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7771), tensor(0.), tensor(0.2907), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.177966, Mean IoU Without Background: 0.058141
+Saved new best model at epoch 31 with Mean IoU: 0.177966
+Learning rate: 8.632374345301496e-05
+Epoch 32/200
+----------
+Train Loss: 1.221286 Acc: 80.838751, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.78it/s] 70%|███████   | 21/30 [00:10<00:04,  2.13it/s]100%|██████████| 30/30 [00:13<00:00,  2.17it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.62it/s]
+Val Classification Accuracy: 0.4524
+Statistics for each class: [0, 0, 120, 0, 0, 6], Total classifications: 126
+Val Loss: 1.248864 Acc: 79.881838, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7908), tensor(0.), tensor(0.3339), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.187440, Mean IoU Without Background: 0.066776
+Saved new best model at epoch 32 with Mean IoU: 0.187440
+Learning rate: 8.586389490422482e-05
+Epoch 33/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 1.225346 Acc: 80.210228, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.4524
+Statistics for each class: [0, 0, 119, 0, 0, 7], Total classifications: 126
+Val Loss: 1.262250 Acc: 79.042071, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7811), tensor(0.), tensor(0.3397), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.186798, Mean IoU Without Background: 0.067942
+Learning rate: 8.540377255288193e-05
+Epoch 34/200
+----------
+Train Loss: 1.210026 Acc: 80.562651, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 33%|███▎      | 10/30 [00:05<00:10,  1.86it/s] 73%|███████▎  | 22/30 [00:10<00:03,  2.15it/s]100%|██████████| 30/30 [00:13<00:00,  2.19it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.63it/s]
+Val Classification Accuracy: 0.4921
+Statistics for each class: [0, 0, 114, 0, 4, 8], Total classifications: 126
+Val Loss: 1.214294 Acc: 80.136532, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7925), tensor(0.), tensor(0.3510), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.190594, Mean IoU Without Background: 0.070205
+Saved new best model at epoch 34 with Mean IoU: 0.190594
+Learning rate: 8.494337459493485e-05
+Epoch 35/200
+----------
+Train Loss: 1.194072 Acc: 80.663506, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.64it/s]
+Val Classification Accuracy: 0.5238
+Statistics for each class: [0, 0, 110, 0, 6, 10], Total classifications: 126
+Val Loss: 1.227401 Acc: 79.405503, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7841), tensor(0.), tensor(0.3762), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.193382, Mean IoU Without Background: 0.075247
+Saved new best model at epoch 35 with Mean IoU: 0.193382
+Learning rate: 8.448269920350252e-05
+Epoch 36/200
+----------
+Train Loss: 1.170675 Acc: 81.198907, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.67it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.64it/s]
+Val Classification Accuracy: 0.5317
+Statistics for each class: [0, 0, 109, 0, 6, 11], Total classifications: 126
+Val Loss: 1.237705 Acc: 78.773717, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7790), tensor(0.), tensor(0.3544), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.188899, Mean IoU Without Background: 0.070889
+Learning rate: 8.402174452844516e-05
+Epoch 37/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 1.172772 Acc: 80.665411, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.64it/s]
+Val Classification Accuracy: 0.5714
+Statistics for each class: [0, 0, 105, 0, 9, 12], Total classifications: 126
+Val Loss: 1.184051 Acc: 80.136514, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7933), tensor(0.), tensor(0.3317), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.187496, Mean IoU Without Background: 0.066337
+Learning rate: 8.356050869592458e-05
+Epoch 38/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 1.158459 Acc: 81.062992, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.64it/s]
+Val Classification Accuracy: 0.5873
+Statistics for each class: [0, 0, 102, 0, 10, 14], Total classifications: 126
+Val Loss: 1.189159 Acc: 79.818241, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7879), tensor(0.), tensor(0.3925), tensor(0.), tensor(0.), tensor(0.0009)], Mean IoU: 0.196876, Mean IoU Without Background: 0.078681
+Saved new best model at epoch 38 with Mean IoU: 0.196876
+Learning rate: 8.309898980795323e-05
+Epoch 39/200
+----------
+Train Loss: 1.146063 Acc: 81.146636, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.77it/s] 70%|███████   | 21/30 [00:10<00:04,  2.12it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.59it/s]
+Val Classification Accuracy: 0.5635
+Statistics for each class: [0, 0, 104, 0, 9, 13], Total classifications: 126
+Val Loss: 1.166565 Acc: 80.357518, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7926), tensor(0.), tensor(0.4104), tensor(0.), tensor(0.), tensor(0.0003)], Mean IoU: 0.200560, Mean IoU Without Background: 0.082146
+Saved new best model at epoch 39 with Mean IoU: 0.200560
+Learning rate: 8.2637185941932e-05
+Epoch 40/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.66it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+Train Loss: 1.133607 Acc: 81.243211, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.56it/s]
+Val Classification Accuracy: 0.6111
+Statistics for each class: [0, 0, 97, 0, 14, 15], Total classifications: 126
+Val Loss: 1.162408 Acc: 79.250657, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7808), tensor(0.), tensor(0.3813), tensor(0.), tensor(0.), tensor(0.0067)], Mean IoU: 0.194796, Mean IoU Without Background: 0.077595
+Learning rate: 8.21750951501761e-05
+Epoch 41/200
+----------
+Train Loss: 1.110710 Acc: 81.859194, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.6111
+Statistics for each class: [0, 0, 97, 0, 14, 15], Total classifications: 126
+Val Loss: 1.163356 Acc: 79.520462, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7846), tensor(0.), tensor(0.3828), tensor(0.), tensor(0.), tensor(0.0135)], Mean IoU: 0.196813, Mean IoU Without Background: 0.079257
+Learning rate: 8.171271545942889e-05
+Epoch 42/200
+----------
+Train Loss: 1.106045 Acc: 81.441260, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.67it/s]
+Val Classification Accuracy: 0.6270
+Statistics for each class: [0, 0, 95, 0, 14, 17], Total classifications: 126
+Val Loss: 1.169307 Acc: 78.675446, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7751), tensor(0.), tensor(0.3759), tensor(0.), tensor(0.), tensor(0.0273)], Mean IoU: 0.196379, Mean IoU Without Background: 0.080641
+Learning rate: 8.12500448703632e-05
+Epoch 43/200
+----------
+Train Loss: 1.093346 Acc: 81.684247, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.6190
+Statistics for each class: [0, 0, 94, 0, 13, 19], Total classifications: 126
+Val Loss: 1.146696 Acc: 79.278340, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7824), tensor(0.), tensor(0.3834), tensor(0.), tensor(0.), tensor(0.0312)], Mean IoU: 0.199492, Mean IoU Without Background: 0.082912
+Learning rate: 8.078708135706954e-05
+Epoch 44/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 1.080796 Acc: 81.811350, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.62it/s]
+Val Classification Accuracy: 0.6349
+Statistics for each class: [0, 0, 92, 0, 14, 20], Total classifications: 126
+Val Loss: 1.145867 Acc: 79.144099, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7813), tensor(0.), tensor(0.3383), tensor(0.), tensor(0.), tensor(0.0468)], Mean IoU: 0.194406, Mean IoU Without Background: 0.077024
+Learning rate: 8.032382286653115e-05
+Epoch 45/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 1.073315 Acc: 81.606768, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.64it/s]
+Val Classification Accuracy: 0.6587
+Statistics for each class: [0, 0, 89, 0, 15, 22], Total classifications: 126
+Val Loss: 1.109139 Acc: 79.853243, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7864), tensor(0.), tensor(0.3948), tensor(0.), tensor(0.), tensor(0.0580)], Mean IoU: 0.206520, Mean IoU Without Background: 0.090541
+Saved new best model at epoch 45 with Mean IoU: 0.206520
+Learning rate: 7.986026731808502e-05
+Epoch 46/200
+----------
+Train Loss: 1.067272 Acc: 81.517484, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.77it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.61it/s]
+Val Classification Accuracy: 0.6429
+Statistics for each class: [0, 0, 91, 0, 16, 19], Total classifications: 126
+Val Loss: 1.072219 Acc: 81.502030, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8045), tensor(0.), tensor(0.4039), tensor(0.), tensor(0.), tensor(0.0847)], Mean IoU: 0.215509, Mean IoU Without Background: 0.097719
+Saved new best model at epoch 46 with Mean IoU: 0.215509
+Learning rate: 7.939641260286894e-05
+Epoch 47/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.66it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+Train Loss: 1.056409 Acc: 81.901778, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.63it/s]
+Val Classification Accuracy: 0.6667
+Statistics for each class: [0, 0, 87, 0, 18, 21], Total classifications: 126
+Val Loss: 1.102756 Acc: 79.445727, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7826), tensor(0.), tensor(0.3624), tensor(0.), tensor(0.), tensor(0.1066)], Mean IoU: 0.208590, Mean IoU Without Background: 0.093798
+Learning rate: 7.893225658325345e-05
+Epoch 48/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.76it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+Train Loss: 1.040400 Acc: 81.842142, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.63it/s]
+Val Classification Accuracy: 0.6508
+Statistics for each class: [0, 0, 88, 0, 18, 20], Total classifications: 126
+Val Loss: 1.085909 Acc: 80.134855, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7909), tensor(0.), tensor(0.3647), tensor(0.), tensor(0.), tensor(0.1371)], Mean IoU: 0.215454, Mean IoU Without Background: 0.100371
+Learning rate: 7.846779709225896e-05
+Epoch 49/200
+----------
+Train Loss: 1.032504 Acc: 82.378333, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.59it/s]
+Val Classification Accuracy: 0.6825
+Statistics for each class: [0, 0, 85, 0, 17, 24], Total classifications: 126
+Val Loss: 1.052905 Acc: 81.018499, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7974), tensor(0.), tensor(0.4069), tensor(0.), tensor(0.), tensor(0.1756)], Mean IoU: 0.229994, Mean IoU Without Background: 0.116506
+Saved new best model at epoch 49 with Mean IoU: 0.229994
+Learning rate: 7.80030319329568e-05
+Epoch 50/200
+----------
+Train Loss: 1.027559 Acc: 82.222461, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.80it/s] 70%|███████   | 21/30 [00:10<00:04,  2.13it/s]100%|██████████| 30/30 [00:13<00:00,  2.18it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.65it/s]
+Val Classification Accuracy: 0.6825
+Statistics for each class: [0, 0, 84, 0, 20, 22], Total classifications: 126
+Val Loss: 1.052166 Acc: 80.752403, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7951), tensor(0.), tensor(0.4168), tensor(0.), tensor(3.2581e-06), tensor(0.1998)], Mean IoU: 0.235289, Mean IoU Without Background: 0.123325
+Saved new best model at epoch 50 with Mean IoU: 0.235289
+Learning rate: 7.753795887785426e-05
+Epoch 51/200
+----------
+Train Loss: 1.009475 Acc: 82.212348, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.6667
+Statistics for each class: [0, 0, 82, 0, 19, 25], Total classifications: 126
+Val Loss: 1.045937 Acc: 80.678474, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7947), tensor(0.), tensor(0.4082), tensor(0.), tensor(0.0002), tensor(0.1764)], Mean IoU: 0.229915, Mean IoU Without Background: 0.116956
+Learning rate: 7.707257566826266e-05
+Epoch 52/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 1.001732 Acc: 82.253380, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.66it/s]
+Val Classification Accuracy: 0.7063
+Statistics for each class: [0, 1, 82, 0, 19, 24], Total classifications: 126
+Val Loss: 1.034809 Acc: 80.872708, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7971), tensor(0.), tensor(0.3943), tensor(0.), tensor(0.), tensor(0.2092)], Mean IoU: 0.233442, Mean IoU Without Background: 0.120710
+Learning rate: 7.6606880013648e-05
+Epoch 53/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 0.995024 Acc: 82.392317, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.64it/s]
+Val Classification Accuracy: 0.6825
+Statistics for each class: [0, 0, 83, 0, 20, 23], Total classifications: 126
+Val Loss: 1.018805 Acc: 81.200842, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7975), tensor(0.), tensor(0.4609), tensor(0.), tensor(0.0007), tensor(0.2155)], Mean IoU: 0.245755, Mean IoU Without Background: 0.135400
+Saved new best model at epoch 53 with Mean IoU: 0.245755
+Learning rate: 7.614086959096382e-05
+Epoch 54/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:13,  1.58it/s] 70%|███████   | 21/30 [00:10<00:04,  2.00it/s]100%|██████████| 30/30 [00:14<00:00,  2.06it/s]
+Train Loss: 0.982724 Acc: 82.618638, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:03<00:00,  1.96it/s]
+Val Classification Accuracy: 0.6746
+Statistics for each class: [0, 0, 86, 0, 20, 20], Total classifications: 126
+Val Loss: 1.000178 Acc: 81.755054, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8060), tensor(0.), tensor(0.4212), tensor(0.), tensor(0.0002), tensor(0.2255)], Mean IoU: 0.242163, Mean IoU Without Background: 0.129391
+Learning rate: 7.567454204396525e-05
+Epoch 55/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 23%|██▎       | 7/30 [00:05<00:16,  1.39it/s] 63%|██████▎   | 19/30 [00:10<00:05,  1.96it/s]100%|██████████| 30/30 [00:14<00:00,  2.04it/s]
+Train Loss: 0.982868 Acc: 82.394618, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.6984
+Statistics for each class: [0, 2, 81, 0, 20, 23], Total classifications: 126
+Val Loss: 0.992559 Acc: 81.938317, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8080), tensor(0.), tensor(0.4231), tensor(0.), tensor(0.0010), tensor(0.2669)], Mean IoU: 0.249826, Mean IoU Without Background: 0.138198
+Saved new best model at epoch 55 with Mean IoU: 0.249826
+Learning rate: 7.520789498250374e-05
+Epoch 56/200
+----------
+Train Loss: 0.983813 Acc: 82.293101, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.6905
+Statistics for each class: [0, 1, 82, 0, 19, 24], Total classifications: 126
+Val Loss: 1.014241 Acc: 80.994863, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7966), tensor(0.), tensor(0.4297), tensor(0.), tensor(0.0011), tensor(0.2764)], Mean IoU: 0.250627, Mean IoU Without Background: 0.141434
+Saved new best model at epoch 56 with Mean IoU: 0.250627
+Learning rate: 7.47409259818022e-05
+Epoch 57/200
+----------
+Train Loss: 0.966082 Acc: 82.913534, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.7063
+Statistics for each class: [0, 1, 83, 0, 20, 22], Total classifications: 126
+Val Loss: 0.985395 Acc: 81.622778, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8023), tensor(0.), tensor(0.4588), tensor(0.), tensor(0.0071), tensor(0.2473)], Mean IoU: 0.252571, Mean IoU Without Background: 0.142628
+Saved new best model at epoch 57 with Mean IoU: 0.252571
+Learning rate: 7.427363258170895e-05
+Epoch 58/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 23%|██▎       | 7/30 [00:05<00:16,  1.36it/s] 63%|██████▎   | 19/30 [00:10<00:05,  1.91it/s]100%|██████████| 30/30 [00:14<00:00,  2.01it/s]
+Train Loss: 0.956928 Acc: 82.931916, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.32it/s]
+Val Classification Accuracy: 0.7063
+Statistics for each class: [0, 3, 83, 0, 19, 21], Total classifications: 126
+Val Loss: 0.978534 Acc: 81.434259, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7999), tensor(0.), tensor(0.4546), tensor(0.), tensor(0.0180), tensor(0.3088)], Mean IoU: 0.263536, Mean IoU Without Background: 0.156273
+Saved new best model at epoch 58 with Mean IoU: 0.263536
+Learning rate: 7.380601228593081e-05
+Epoch 59/200
+----------
+Train Loss: 0.948601 Acc: 83.036569, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.01it/s]
+Val Classification Accuracy: 0.6905
+Statistics for each class: [0, 1, 83, 0, 18, 24], Total classifications: 126
+Val Loss: 0.962104 Acc: 82.742652, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8163), tensor(0.), tensor(0.4466), tensor(0.), tensor(0.0132), tensor(0.2698)], Mean IoU: 0.257644, Mean IoU Without Background: 0.145914
+Learning rate: 7.333806256124367e-05
+Epoch 60/200
+----------
+Train Loss: 0.937809 Acc: 83.282413, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.66it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.46it/s]
+Val Classification Accuracy: 0.6984
+Statistics for each class: [0, 1, 80, 0, 20, 25], Total classifications: 126
+Val Loss: 0.965382 Acc: 81.738950, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8059), tensor(0.), tensor(0.4138), tensor(0.), tensor(0.0223), tensor(0.3340)], Mean IoU: 0.262671, Mean IoU Without Background: 0.154027
+Learning rate: 7.286978083668017e-05
+Epoch 61/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.935185 Acc: 83.120767, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.41it/s]
+Val Classification Accuracy: 0.7222
+Statistics for each class: [0, 4, 81, 0, 19, 22], Total classifications: 126
+Val Loss: 0.960410 Acc: 81.749892, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8025), tensor(0.), tensor(0.4430), tensor(0.), tensor(0.0310), tensor(0.3485)], Mean IoU: 0.270824, Mean IoU Without Background: 0.164494
+Saved new best model at epoch 61 with Mean IoU: 0.270824
+Learning rate: 7.24011645026938e-05
+Epoch 62/200
+----------
+Train Loss: 0.917366 Acc: 83.475911, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.67it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.48it/s]
+Val Classification Accuracy: 0.7143
+Statistics for each class: [0, 3, 79, 0, 20, 24], Total classifications: 126
+Val Loss: 0.978099 Acc: 81.671630, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8046), tensor(0.), tensor(0.4317), tensor(0.), tensor(0.0371), tensor(0.3209)], Mean IoU: 0.265719, Mean IoU Without Background: 0.157937
+Learning rate: 7.193221091029803e-05
+Epoch 63/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:14,  1.57it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.923668 Acc: 83.267740, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.42it/s]
+Val Classification Accuracy: 0.7143
+Statistics for each class: [0, 3, 79, 0, 19, 25], Total classifications: 126
+Val Loss: 0.975881 Acc: 80.886105, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.7944), tensor(0.), tensor(0.4123), tensor(0.), tensor(0.0482), tensor(0.3242)], Mean IoU: 0.263190, Mean IoU Without Background: 0.156955
+Learning rate: 7.146291737018001e-05
+Epoch 64/200
+----------
+Train Loss: 0.911979 Acc: 83.406525, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:14,  1.53it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.01it/s]100%|██████████| 30/30 [00:14<00:00,  2.07it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.47it/s]
+Val Classification Accuracy: 0.7302
+Statistics for each class: [0, 4, 77, 0, 21, 24], Total classifications: 126
+Val Loss: 0.940384 Acc: 81.900500, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8037), tensor(0.), tensor(0.4748), tensor(0.), tensor(0.0535), tensor(0.3458)], Mean IoU: 0.279638, Mean IoU Without Background: 0.174816
+Saved new best model at epoch 64 with Mean IoU: 0.279638
+Learning rate: 7.099328115178771e-05
+Epoch 65/200
+----------
+Train Loss: 0.909757 Acc: 83.399458, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.48it/s]
+Val Classification Accuracy: 0.7460
+Statistics for each class: [0, 6, 75, 0, 20, 25], Total classifications: 126
+Val Loss: 0.941610 Acc: 81.606986, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8021), tensor(0.), tensor(0.4473), tensor(0.), tensor(0.0465), tensor(0.3495)], Mean IoU: 0.274230, Mean IoU Without Background: 0.168651
+Learning rate: 7.052329948238959e-05
+Epoch 66/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.912661 Acc: 83.254981, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.40it/s]
+Val Classification Accuracy: 0.7222
+Statistics for each class: [0, 4, 77, 0, 20, 25], Total classifications: 126
+Val Loss: 0.924092 Acc: 82.453398, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8112), tensor(0.), tensor(0.4546), tensor(0.), tensor(0.0677), tensor(0.3372)], Mean IoU: 0.278437, Mean IoU Without Background: 0.171894
+Learning rate: 7.005296954610555e-05
+Epoch 67/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 0.905978 Acc: 82.970408, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.46it/s]
+Val Classification Accuracy: 0.7143
+Statistics for each class: [0, 3, 80, 0, 19, 24], Total classifications: 126
+Val Loss: 0.943534 Acc: 81.782347, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8054), tensor(0.), tensor(0.4390), tensor(0.), tensor(0.0795), tensor(0.3247)], Mean IoU: 0.274769, Mean IoU Without Background: 0.168640
+Learning rate: 6.958228848290839e-05
+Epoch 68/200
+----------
+Train Loss: 0.896483 Acc: 83.635021, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.48it/s]
+Val Classification Accuracy: 0.7460
+Statistics for each class: [0, 5, 76, 0, 21, 24], Total classifications: 126
+Val Loss: 0.954493 Acc: 81.533795, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8032), tensor(0.), tensor(0.4400), tensor(0.), tensor(0.0951), tensor(0.3311)], Mean IoU: 0.278241, Mean IoU Without Background: 0.173243
+Learning rate: 6.911125338759436e-05
+Epoch 69/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.893306 Acc: 83.647779, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.49it/s]
+Val Classification Accuracy: 0.7460
+Statistics for each class: [0, 7, 76, 0, 19, 24], Total classifications: 126
+Val Loss: 0.922500 Acc: 82.187868, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8082), tensor(0.), tensor(0.4734), tensor(0.), tensor(0.0929), tensor(0.3402)], Mean IoU: 0.285789, Mean IoU Without Background: 0.181306
+Saved new best model at epoch 69 with Mean IoU: 0.285789
+Learning rate: 6.863986130872174e-05
+Epoch 70/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 0.879572 Acc: 83.727411, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.47it/s]
+Val Classification Accuracy: 0.7222
+Statistics for each class: [0, 5, 77, 0, 19, 25], Total classifications: 126
+Val Loss: 0.922616 Acc: 82.474927, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8110), tensor(0.), tensor(0.4567), tensor(0.), tensor(0.1185), tensor(0.3594)], Mean IoU: 0.290932, Mean IoU Without Background: 0.186916
+Saved new best model at epoch 70 with Mean IoU: 0.290932
+Learning rate: 6.816810924751616e-05
+Epoch 71/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.878001 Acc: 83.763416, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.50it/s]
+Val Classification Accuracy: 0.7381
+Statistics for each class: [0, 5, 78, 0, 21, 22], Total classifications: 126
+Val Loss: 0.892906 Acc: 82.586134, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8116), tensor(0.), tensor(0.4480), tensor(0.), tensor(0.1147), tensor(0.3761)], Mean IoU: 0.291742, Mean IoU Without Background: 0.187771
+Saved new best model at epoch 71 with Mean IoU: 0.291742
+Learning rate: 6.76959941567416e-05
+Epoch 72/200
+----------
+Train Loss: 0.883770 Acc: 83.450977, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.53it/s]
+Val Classification Accuracy: 0.7302
+Statistics for each class: [0, 6, 76, 0, 18, 26], Total classifications: 126
+Val Loss: 0.892484 Acc: 83.177461, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8179), tensor(0.), tensor(0.4673), tensor(0.), tensor(0.1319), tensor(0.3774)], Mean IoU: 0.299092, Mean IoU Without Background: 0.195334
+Saved new best model at epoch 72 with Mean IoU: 0.299092
+Learning rate: 6.722351293953503e-05
+Epoch 73/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:14,  1.51it/s] 67%|██████▋   | 20/30 [00:10<00:05,  1.95it/s]100%|██████████| 30/30 [00:14<00:00,  2.04it/s]
+Train Loss: 0.865977 Acc: 83.830958, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.45it/s]
+Val Classification Accuracy: 0.7460
+Statistics for each class: [0, 7, 77, 0, 19, 23], Total classifications: 126
+Val Loss: 0.880807 Acc: 83.093982, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8157), tensor(0.), tensor(0.4843), tensor(0.), tensor(0.1210), tensor(0.3862)], Mean IoU: 0.301210, Mean IoU Without Background: 0.198311
+Saved new best model at epoch 73 with Mean IoU: 0.301210
+Learning rate: 6.675066244820428e-05
+Epoch 74/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.78it/s] 70%|███████   | 21/30 [00:10<00:04,  2.12it/s]100%|██████████| 30/30 [00:13<00:00,  2.17it/s]
+Train Loss: 0.873546 Acc: 83.860042, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.50it/s]
+Val Classification Accuracy: 0.7302
+Statistics for each class: [0, 7, 72, 0, 20, 27], Total classifications: 126
+Val Loss: 0.897666 Acc: 82.977080, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8157), tensor(0.), tensor(0.4791), tensor(0.), tensor(0.1479), tensor(0.3418)], Mean IoU: 0.297417, Mean IoU Without Background: 0.193766
+Learning rate: 6.627743948298659e-05
+Epoch 75/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+Train Loss: 0.858667 Acc: 83.928551, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.7619
+Statistics for each class: [0, 8, 73, 0, 20, 25], Total classifications: 126
+Val Loss: 0.903788 Acc: 81.760803, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8016), tensor(0.), tensor(0.4495), tensor(0.), tensor(0.1478), tensor(0.3200)], Mean IoU: 0.286482, Mean IoU Without Background: 0.183468
+Learning rate: 6.5803840790767e-05
+Epoch 76/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.14it/s]
+Train Loss: 0.850716 Acc: 84.215789, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.7460
+Statistics for each class: [0, 9, 76, 0, 18, 23], Total classifications: 126
+Val Loss: 0.911226 Acc: 82.145197, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8074), tensor(0.), tensor(0.4358), tensor(0.), tensor(0.1506), tensor(0.3727)], Mean IoU: 0.294430, Mean IoU Without Background: 0.191831
+Learning rate: 6.53298630637547e-05
+Epoch 77/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.851968 Acc: 83.978305, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.7619
+Statistics for each class: [0, 10, 68, 0, 22, 26], Total classifications: 126
+Val Loss: 0.888882 Acc: 82.138976, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8061), tensor(0.), tensor(0.4515), tensor(0.), tensor(0.1581), tensor(0.3592)], Mean IoU: 0.295817, Mean IoU Without Background: 0.193755
+Learning rate: 6.485550293811539e-05
+Epoch 78/200
+----------
+Train Loss: 0.856101 Acc: 83.832537, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.66it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 10, 71, 0, 22, 23], Total classifications: 126
+Val Loss: 0.838163 Acc: 83.764212, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8217), tensor(0.), tensor(0.5129), tensor(0.), tensor(0.1472), tensor(0.3745)], Mean IoU: 0.309386, Mean IoU Without Background: 0.206917
+Saved new best model at epoch 78 with Mean IoU: 0.309386
+Learning rate: 6.438075699255831e-05
+Epoch 79/200
+----------
+Train Loss: 0.838278 Acc: 84.015294, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.14it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.53it/s]
+Val Classification Accuracy: 0.7778
+Statistics for each class: [0, 9, 74, 0, 21, 22], Total classifications: 126
+Val Loss: 0.870830 Acc: 82.394869, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8096), tensor(0.), tensor(0.4366), tensor(0.), tensor(0.1552), tensor(0.3674)], Mean IoU: 0.294805, Mean IoU Without Background: 0.191844
+Learning rate: 6.390562174687556e-05
+Epoch 80/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.832780 Acc: 84.190260, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.7540
+Statistics for each class: [0, 8, 72, 0, 21, 25], Total classifications: 126
+Val Loss: 0.887400 Acc: 82.262990, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8088), tensor(0.), tensor(0.4639), tensor(0.), tensor(0.1836), tensor(0.3377)], Mean IoU: 0.298997, Mean IoU Without Background: 0.197032
+Learning rate: 6.343009366043189e-05
+Epoch 81/200
+----------
+Train Loss: 0.831235 Acc: 84.387363, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.67it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.61it/s]
+Val Classification Accuracy: 0.7698
+Statistics for each class: [0, 12, 72, 0, 20, 22], Total classifications: 126
+Val Loss: 0.862044 Acc: 82.747114, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8120), tensor(0.), tensor(0.4720), tensor(0.), tensor(0.1968), tensor(0.3935)], Mean IoU: 0.312395, Mean IoU Without Background: 0.212469
+Saved new best model at epoch 81 with Mean IoU: 0.312395
+Learning rate: 6.295416913060308e-05
+Epoch 82/200
+----------
+Train Loss: 0.834327 Acc: 84.182955, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.7460
+Statistics for each class: [0, 10, 71, 0, 19, 26], Total classifications: 126
+Val Loss: 0.873664 Acc: 82.438417, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8092), tensor(0.), tensor(0.4568), tensor(0.), tensor(0.1989), tensor(0.3892)], Mean IoU: 0.309023, Mean IoU Without Background: 0.208992
+Learning rate: 6.247784449116027e-05
+Epoch 83/200
+----------
+Train Loss: 0.830362 Acc: 84.058007, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.66it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.7460
+Statistics for each class: [0, 10, 72, 0, 20, 24], Total classifications: 126
+Val Loss: 0.835589 Acc: 83.590568, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8227), tensor(0.), tensor(0.4620), tensor(0.), tensor(0.1820), tensor(0.3619)], Mean IoU: 0.304774, Mean IoU Without Background: 0.201180
+Learning rate: 6.200111601059819e-05
+Epoch 84/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.819686 Acc: 84.440181, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.51it/s]
+Val Classification Accuracy: 0.7619
+Statistics for each class: [0, 11, 68, 0, 19, 28], Total classifications: 126
+Val Loss: 0.850548 Acc: 83.174133, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8175), tensor(0.), tensor(0.4799), tensor(0.), tensor(0.1881), tensor(0.3749)], Mean IoU: 0.310092, Mean IoU Without Background: 0.208601
+Learning rate: 6.152397989040478e-05
+Epoch 85/200
+----------
+Train Loss: 0.808945 Acc: 84.695247, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.63it/s]
+Val Classification Accuracy: 0.7540
+Statistics for each class: [0, 16, 64, 0, 19, 27], Total classifications: 126
+Val Loss: 0.872299 Acc: 82.665219, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8112), tensor(0.), tensor(0.4722), tensor(0.), tensor(0.1923), tensor(0.3901)], Mean IoU: 0.310970, Mean IoU Without Background: 0.210918
+Learning rate: 6.104643226326973e-05
+Epoch 86/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.796565 Acc: 84.970623, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 14, 66, 0, 21, 25], Total classifications: 126
+Val Loss: 0.853444 Acc: 82.618641, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8114), tensor(0.), tensor(0.4670), tensor(0.), tensor(0.2143), tensor(0.3748)], Mean IoU: 0.311261, Mean IoU Without Background: 0.211233
+Learning rate: 6.056846919122898e-05
+Epoch 87/200
+----------
+Train Loss: 0.804377 Acc: 84.402056, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:14,  1.57it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.03it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.59it/s]
+Val Classification Accuracy: 0.7619
+Statistics for each class: [0, 13, 71, 0, 20, 22], Total classifications: 126
+Val Loss: 0.854015 Acc: 82.948679, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8125), tensor(0.), tensor(0.4945), tensor(0.), tensor(0.2138), tensor(0.3872)], Mean IoU: 0.318004, Mean IoU Without Background: 0.219107
+Saved new best model at epoch 87 with Mean IoU: 0.318004
+Learning rate: 6.009008666374241e-05
+Epoch 88/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 0.808343 Acc: 84.660935, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.62it/s]
+Val Classification Accuracy: 0.7698
+Statistics for each class: [0, 13, 66, 0, 21, 26], Total classifications: 126
+Val Loss: 0.824575 Acc: 83.622533, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8195), tensor(0.), tensor(0.4867), tensor(0.), tensor(0.2244), tensor(0.4117)], Mean IoU: 0.323729, Mean IoU Without Background: 0.224564
+Saved new best model at epoch 88 with Mean IoU: 0.323729
+Learning rate: 5.961128059570192e-05
+Epoch 89/200
+----------
+Train Loss: 0.800937 Acc: 84.865644, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.53it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 13, 67, 0, 21, 25], Total classifications: 126
+Val Loss: 0.843746 Acc: 82.933571, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8139), tensor(0.), tensor(0.4482), tensor(0.), tensor(0.2248), tensor(0.3910)], Mean IoU: 0.312989, Mean IoU Without Background: 0.212802
+Learning rate: 5.9132046825366497e-05
+Epoch 90/200
+----------
+Train Loss: 0.800039 Acc: 84.441179, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.7698
+Statistics for each class: [0, 15, 65, 0, 20, 26], Total classifications: 126
+Val Loss: 0.841346 Acc: 83.135460, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8162), tensor(0.), tensor(0.4895), tensor(0.), tensor(0.2178), tensor(0.3561)], Mean IoU: 0.313277, Mean IoU Without Background: 0.212701
+Learning rate: 5.865238111222084e-05
+Epoch 91/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.799604 Acc: 84.512630, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.7698
+Statistics for each class: [0, 14, 68, 0, 21, 23], Total classifications: 126
+Val Loss: 0.863298 Acc: 82.428072, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8095), tensor(0.), tensor(0.4450), tensor(0.), tensor(0.2373), tensor(0.3770)], Mean IoU: 0.311460, Mean IoU Without Background: 0.211850
+Learning rate: 5.8172279134754324e-05
+Epoch 92/200
+----------
+Train Loss: 0.791556 Acc: 84.486913, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.77it/s] 70%|███████   | 21/30 [00:10<00:04,  2.12it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.7619
+Statistics for each class: [0, 11, 68, 0, 21, 26], Total classifications: 126
+Val Loss: 0.863216 Acc: 82.456819, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8095), tensor(0.), tensor(0.4794), tensor(0.), tensor(0.2337), tensor(0.3900)], Mean IoU: 0.318766, Mean IoU Without Background: 0.220618
+Learning rate: 5.769173648815619e-05
+Epoch 93/200
+----------
+Train Loss: 0.780927 Acc: 84.911638, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 15, 68, 0, 21, 22], Total classifications: 126
+Val Loss: 0.835025 Acc: 82.077926, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8034), tensor(0.), tensor(0.4934), tensor(0.), tensor(0.2219), tensor(0.3642)], Mean IoU: 0.313819, Mean IoU Without Background: 0.215909
+Learning rate: 5.721074868192338e-05
+Epoch 94/200
+----------
+Train Loss: 0.784286 Acc: 84.754998, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.7460
+Statistics for each class: [0, 15, 63, 0, 21, 27], Total classifications: 126
+Val Loss: 0.836357 Acc: 83.361626, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8196), tensor(0.), tensor(0.4644), tensor(0.), tensor(0.2594), tensor(0.3869)], Mean IoU: 0.321718, Mean IoU Without Background: 0.222143
+Learning rate: 5.6729311137376495e-05
+Epoch 95/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.792937 Acc: 84.534268, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.53it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 15, 63, 0, 21, 27], Total classifications: 126
+Val Loss: 0.842630 Acc: 81.928477, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8024), tensor(0.), tensor(0.4889), tensor(0.), tensor(0.2654), tensor(0.3837)], Mean IoU: 0.323397, Mean IoU Without Background: 0.227590
+Learning rate: 5.624741918507974e-05
+Epoch 96/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.67it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+Train Loss: 0.790905 Acc: 84.350427, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 17, 62, 0, 21, 26], Total classifications: 126
+Val Loss: 0.817169 Acc: 83.296649, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8198), tensor(0.), tensor(0.4511), tensor(0.), tensor(0.2428), tensor(0.3742)], Mean IoU: 0.314630, Mean IoU Without Background: 0.213606
+Learning rate: 5.5765068062159965e-05
+Epoch 97/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.77it/s] 70%|███████   | 21/30 [00:10<00:04,  2.12it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+Train Loss: 0.771396 Acc: 85.087328, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.49it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 19, 61, 0, 21, 25], Total classifications: 126
+Val Loss: 0.815556 Acc: 84.075059, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8268), tensor(0.), tensor(0.5084), tensor(0.), tensor(0.2465), tensor(0.3961)], Mean IoU: 0.329640, Mean IoU Without Background: 0.230204
+Saved new best model at epoch 97 with Mean IoU: 0.329640
+Learning rate: 5.5282252909520024e-05
+Epoch 98/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 0.768606 Acc: 85.101326, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 16, 64, 0, 21, 25], Total classifications: 126
+Val Loss: 0.828365 Acc: 82.914192, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8176), tensor(0.), tensor(0.4108), tensor(0.), tensor(0.2674), tensor(0.3939)], Mean IoU: 0.314930, Mean IoU Without Background: 0.214406
+Learning rate: 5.479896876894116e-05
+Epoch 99/200
+----------
+Train Loss: 0.776415 Acc: 84.621542, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.53it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 14, 66, 0, 20, 26], Total classifications: 126
+Val Loss: 0.809302 Acc: 83.951084, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8249), tensor(0.), tensor(0.5025), tensor(0.), tensor(0.2461), tensor(0.4081)], Mean IoU: 0.330261, Mean IoU Without Background: 0.231342
+Saved new best model at epoch 99 with Mean IoU: 0.330261
+Learning rate: 5.431521058006881e-05
+Epoch 100/200
+----------
+Train Loss: 0.758607 Acc: 85.239679, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 16, 65, 0, 20, 25], Total classifications: 126
+Val Loss: 0.809493 Acc: 82.879639, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8119), tensor(0.), tensor(0.4700), tensor(0.), tensor(0.2664), tensor(0.4033)], Mean IoU: 0.325269, Mean IoU Without Background: 0.227951
+Learning rate: 5.383097317727596e-05
+Epoch 101/200
+----------
+Train Loss: 0.763917 Acc: 84.900829, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.14it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.47it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 18, 64, 0, 20, 24], Total classifications: 126
+Val Loss: 0.800934 Acc: 84.115455, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8262), tensor(0.), tensor(0.4702), tensor(0.), tensor(0.2854), tensor(0.4116)], Mean IoU: 0.332243, Mean IoU Without Background: 0.233451
+Saved new best model at epoch 101 with Mean IoU: 0.332243
+Learning rate: 5.3346251286397906e-05
+Epoch 102/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.766065 Acc: 84.905664, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.7778
+Statistics for each class: [0, 18, 62, 0, 21, 25], Total classifications: 126
+Val Loss: 0.828476 Acc: 82.914619, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8145), tensor(0.), tensor(0.4537), tensor(0.), tensor(0.2586), tensor(0.3849)], Mean IoU: 0.318594, Mean IoU Without Background: 0.219420
+Learning rate: 5.286103952133162e-05
+Epoch 103/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.760201 Acc: 84.879583, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 20, 58, 0, 22, 26], Total classifications: 126
+Val Loss: 0.813471 Acc: 82.670781, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8087), tensor(0.), tensor(0.5016), tensor(0.), tensor(0.2802), tensor(0.3872)], Mean IoU: 0.329616, Mean IoU Without Background: 0.233809
+Learning rate: 5.2375332380492845e-05
+Epoch 104/200
+----------
+Train Loss: 0.751496 Acc: 85.100003, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.61it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 16, 60, 0, 22, 28], Total classifications: 126
+Val Loss: 0.802654 Acc: 82.875349, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8124), tensor(0.), tensor(0.4834), tensor(0.), tensor(0.2636), tensor(0.4060)], Mean IoU: 0.327572, Mean IoU Without Background: 0.230616
+Learning rate: 5.1889124243123254e-05
+Epoch 105/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.750784 Acc: 85.109491, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 19, 59, 0, 22, 26], Total classifications: 126
+Val Loss: 0.791750 Acc: 82.698556, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8120), tensor(0.), tensor(0.4867), tensor(0.), tensor(0.2404), tensor(0.3970)], Mean IoU: 0.322672, Mean IoU Without Background: 0.224815
+Learning rate: 5.1402409365439875e-05
+Epoch 106/200
+----------
+Train Loss: 0.732305 Acc: 85.746408, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.76it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.56it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 15, 63, 0, 20, 28], Total classifications: 126
+Val Loss: 0.806773 Acc: 83.200427, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8142), tensor(0.), tensor(0.4980), tensor(0.), tensor(0.2642), tensor(0.4243)], Mean IoU: 0.333440, Mean IoU Without Background: 0.237286
+Saved new best model at epoch 106 with Mean IoU: 0.333440
+Learning rate: 5.0915181876618214e-05
+Epoch 107/200
+----------
+Train Loss: 0.744636 Acc: 85.020283, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.60it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.62it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 18, 62, 0, 20, 26], Total classifications: 126
+Val Loss: 0.802823 Acc: 82.801350, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8111), tensor(0.), tensor(0.4804), tensor(0.), tensor(0.2774), tensor(0.3968)], Mean IoU: 0.327605, Mean IoU Without Background: 0.230909
+Learning rate: 5.042743577460001e-05
+Epoch 108/200
+----------
+Train Loss: 0.745799 Acc: 84.796364, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 17, 62, 0, 21, 26], Total classifications: 126
+Val Loss: 0.790275 Acc: 83.711146, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8231), tensor(0.), tensor(0.4848), tensor(0.), tensor(0.2608), tensor(0.3859)], Mean IoU: 0.325779, Mean IoU Without Background: 0.226311
+Learning rate: 4.993916492171617e-05
+Epoch 109/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.735812 Acc: 85.208298, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 15, 65, 0, 21, 25], Total classifications: 126
+Val Loss: 0.790550 Acc: 83.349836, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8187), tensor(0.), tensor(0.4545), tensor(0.), tensor(0.2771), tensor(0.4018)], Mean IoU: 0.325341, Mean IoU Without Background: 0.226675
+Learning rate: 4.9450363040114365e-05
+Epoch 110/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 0.740503 Acc: 85.135991, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 20, 58, 0, 21, 27], Total classifications: 126
+Val Loss: 0.800215 Acc: 82.441724, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8070), tensor(0.), tensor(0.4769), tensor(0.), tensor(0.2953), tensor(0.3876)], Mean IoU: 0.327806, Mean IoU Without Background: 0.231965
+Learning rate: 4.896102370698064e-05
+Epoch 111/200
+----------
+Train Loss: 0.743304 Acc: 84.811969, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.56it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 22, 58, 0, 21, 25], Total classifications: 126
+Val Loss: 0.759167 Acc: 84.564052, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8314), tensor(0.), tensor(0.4907), tensor(0.), tensor(0.2725), tensor(0.3964)], Mean IoU: 0.331844, Mean IoU Without Background: 0.231932
+Learning rate: 4.8471140349543054e-05
+Epoch 112/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.737411 Acc: 85.034000, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.56it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 14, 63, 0, 21, 28], Total classifications: 126
+Val Loss: 0.793934 Acc: 82.648247, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8094), tensor(0.), tensor(0.4848), tensor(0.), tensor(0.2926), tensor(0.4278)], Mean IoU: 0.335763, Mean IoU Without Background: 0.241042
+Saved new best model at epoch 112 with Mean IoU: 0.335763
+Learning rate: 4.79807062398451e-05
+Epoch 113/200
+----------
+Train Loss: 0.731930 Acc: 85.213812, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.7778
+Statistics for each class: [0, 20, 59, 0, 19, 28], Total classifications: 126
+Val Loss: 0.799849 Acc: 82.794610, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8126), tensor(0.), tensor(0.4833), tensor(0.), tensor(0.2879), tensor(0.3969)], Mean IoU: 0.330132, Mean IoU Without Background: 0.233629
+Learning rate: 4.748971448927541e-05
+Epoch 114/200
+----------
+Train Loss: 0.726114 Acc: 85.271953, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 18, 60, 0, 21, 27], Total classifications: 126
+Val Loss: 0.772984 Acc: 83.976882, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8243), tensor(0.), tensor(0.5026), tensor(0.), tensor(0.2989), tensor(0.4148)], Mean IoU: 0.340113, Mean IoU Without Background: 0.243266
+Saved new best model at epoch 114 with Mean IoU: 0.340113
+Learning rate: 4.699815804283951e-05
+Epoch 115/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 23%|██▎       | 7/30 [00:05<00:16,  1.39it/s] 63%|██████▎   | 19/30 [00:10<00:05,  1.94it/s]100%|██████████| 30/30 [00:14<00:00,  2.02it/s]
+Train Loss: 0.730707 Acc: 85.113384, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.50it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 21, 57, 0, 21, 27], Total classifications: 126
+Val Loss: 0.782226 Acc: 83.474426, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8182), tensor(0.), tensor(0.5343), tensor(0.), tensor(0.2892), tensor(0.4129)], Mean IoU: 0.342441, Mean IoU Without Background: 0.247290
+Saved new best model at epoch 115 with Mean IoU: 0.342441
+Learning rate: 4.6506029673158284e-05
+Epoch 116/200
+----------
+Train Loss: 0.721337 Acc: 85.241393, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.66it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.53it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 19, 59, 0, 21, 27], Total classifications: 126
+Val Loss: 0.773143 Acc: 84.039839, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8227), tensor(0.), tensor(0.5404), tensor(0.), tensor(0.2950), tensor(0.4127)], Mean IoU: 0.345135, Mean IoU Without Background: 0.249623
+Saved new best model at epoch 116 with Mean IoU: 0.345135
+Learning rate: 4.601332197417671e-05
+Epoch 117/200
+----------
+Train Loss: 0.713514 Acc: 85.627514, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 18, 61, 0, 20, 27], Total classifications: 126
+Val Loss: 0.781096 Acc: 83.019372, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8123), tensor(0.), tensor(0.4972), tensor(0.), tensor(0.2787), tensor(0.4117)], Mean IoU: 0.333329, Mean IoU Without Background: 0.237527
+Learning rate: 4.552002735456537e-05
+Epoch 118/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:14,  1.54it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.02it/s]100%|██████████| 30/30 [00:14<00:00,  2.08it/s]
+Train Loss: 0.710709 Acc: 85.662211, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.48it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 21, 55, 0, 21, 29], Total classifications: 126
+Val Loss: 0.785192 Acc: 82.643385, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8086), tensor(0.), tensor(0.5017), tensor(0.), tensor(0.2681), tensor(0.4063)], Mean IoU: 0.330783, Mean IoU Without Background: 0.235211
+Learning rate: 4.5026138030795756e-05
+Epoch 119/200
+----------
+Train Loss: 0.719892 Acc: 85.285742, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 21, 56, 0, 22, 27], Total classifications: 126
+Val Loss: 0.785874 Acc: 83.145632, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8167), tensor(0.), tensor(0.4851), tensor(0.), tensor(0.2809), tensor(0.4102)], Mean IoU: 0.332142, Mean IoU Without Background: 0.235234
+Learning rate: 4.453164601986908e-05
+Epoch 120/200
+----------
+Train Loss: 0.714142 Acc: 85.378198, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.67it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.47it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 19, 63, 0, 20, 24], Total classifications: 126
+Val Loss: 0.786562 Acc: 82.997404, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8136), tensor(0.), tensor(0.4822), tensor(0.), tensor(0.2942), tensor(0.4191)], Mean IoU: 0.334854, Mean IoU Without Background: 0.239099
+Learning rate: 4.403654313167679e-05
+Epoch 121/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.704952 Acc: 85.288367, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.48it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 17, 60, 0, 21, 28], Total classifications: 126
+Val Loss: 0.767897 Acc: 83.958935, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8240), tensor(0.), tensor(0.5045), tensor(0.), tensor(0.2826), tensor(0.4128)], Mean IoU: 0.337330, Mean IoU Without Background: 0.239988
+Learning rate: 4.354082096096918e-05
+Epoch 122/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.720278 Acc: 85.180021, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.44it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 19, 60, 0, 21, 26], Total classifications: 126
+Val Loss: 0.732408 Acc: 84.212442, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8233), tensor(0.), tensor(0.5598), tensor(0.), tensor(0.2861), tensor(0.4012)], Mean IoU: 0.345062, Mean IoU Without Background: 0.249411
+Learning rate: 4.304447087890699e-05
+Epoch 123/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.703317 Acc: 85.498096, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.48it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 19, 60, 0, 22, 25], Total classifications: 126
+Val Loss: 0.741325 Acc: 84.164459, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8275), tensor(0.), tensor(0.5092), tensor(0.), tensor(0.2944), tensor(0.4001)], Mean IoU: 0.338548, Mean IoU Without Background: 0.240753
+Learning rate: 4.2547484024168515e-05
+Epoch 124/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.711486 Acc: 85.511674, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.59it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 16, 62, 0, 22, 26], Total classifications: 126
+Val Loss: 0.767699 Acc: 82.700436, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8098), tensor(0.), tensor(0.4976), tensor(0.), tensor(0.2935), tensor(0.4070)], Mean IoU: 0.334656, Mean IoU Without Background: 0.239618
+Learning rate: 4.2049851293582824e-05
+Epoch 125/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.709645 Acc: 85.339624, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 16, 62, 0, 22, 26], Total classifications: 126
+Val Loss: 0.757526 Acc: 83.192940, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8145), tensor(0.), tensor(0.4798), tensor(0.), tensor(0.3004), tensor(0.4240)], Mean IoU: 0.336447, Mean IoU Without Background: 0.240844
+Learning rate: 4.155156333225729e-05
+Epoch 126/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.709471 Acc: 85.440017, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 17, 62, 0, 22, 25], Total classifications: 126
+Val Loss: 0.763798 Acc: 83.072923, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8144), tensor(0.), tensor(0.4779), tensor(0.), tensor(0.2925), tensor(0.3724)], Mean IoU: 0.326214, Mean IoU Without Background: 0.228569
+Learning rate: 4.105261052316493e-05
+Epoch 127/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:14,  1.57it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.03it/s]100%|██████████| 30/30 [00:14<00:00,  2.09it/s]
+Train Loss: 0.693101 Acc: 85.637240, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.56it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 19, 60, 0, 20, 27], Total classifications: 126
+Val Loss: 0.780641 Acc: 83.285852, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8193), tensor(0.), tensor(0.4592), tensor(0.), tensor(0.3006), tensor(0.3845)], Mean IoU: 0.327272, Mean IoU Without Background: 0.228864
+Learning rate: 4.055298297615446e-05
+Epoch 128/200
+----------
+Train Loss: 0.690440 Acc: 85.545042, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 22, 56, 0, 21, 27], Total classifications: 126
+Val Loss: 0.773009 Acc: 83.344765, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8194), tensor(0.), tensor(0.4806), tensor(0.), tensor(0.3225), tensor(0.3911)], Mean IoU: 0.335602, Mean IoU Without Background: 0.238845
+Learning rate: 4.0052670516342463e-05
+Epoch 129/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 0.695044 Acc: 85.717065, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.51it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 23, 60, 0, 20, 23], Total classifications: 126
+Val Loss: 0.738595 Acc: 84.511593, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8287), tensor(0.), tensor(0.5148), tensor(0.), tensor(0.3038), tensor(0.3838)], Mean IoU: 0.338512, Mean IoU Without Background: 0.240478
+Learning rate: 3.955166267184413e-05
+Epoch 130/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.693342 Acc: 85.422092, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.53it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 19, 58, 0, 21, 28], Total classifications: 126
+Val Loss: 0.758377 Acc: 83.013683, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8118), tensor(0.), tensor(0.5266), tensor(0.), tensor(0.2806), tensor(0.4190)], Mean IoU: 0.339669, Mean IoU Without Background: 0.245236
+Learning rate: 3.904994866079476e-05
+Epoch 131/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.689455 Acc: 85.588914, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 17, 61, 0, 21, 27], Total classifications: 126
+Val Loss: 0.782735 Acc: 82.370649, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8077), tensor(0.), tensor(0.4766), tensor(0.), tensor(0.2826), tensor(0.3942)], Mean IoU: 0.326858, Mean IoU Without Background: 0.230685
+Learning rate: 3.854751737761052e-05
+Epoch 132/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.689478 Acc: 85.714215, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 19, 60, 0, 21, 26], Total classifications: 126
+Val Loss: 0.730012 Acc: 84.279829, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8271), tensor(0.), tensor(0.5292), tensor(0.), tensor(0.3038), tensor(0.3772)], Mean IoU: 0.339551, Mean IoU Without Background: 0.242033
+Learning rate: 3.804435737843204e-05
+Epoch 133/200
+----------
+Train Loss: 0.680611 Acc: 85.753836, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 20, 58, 0, 21, 27], Total classifications: 126
+Val Loss: 0.756810 Acc: 83.864400, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8243), tensor(0.), tensor(0.5080), tensor(0.), tensor(0.3142), tensor(0.3982)], Mean IoU: 0.340797, Mean IoU Without Background: 0.244098
+Learning rate: 3.754045686568952e-05
+Epoch 134/200
+----------
+Train Loss: 0.686445 Acc: 85.654147, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 21, 57, 0, 22, 26], Total classifications: 126
+Val Loss: 0.752446 Acc: 82.697920, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8124), tensor(0.), tensor(0.4662), tensor(0.), tensor(0.3110), tensor(0.3797)], Mean IoU: 0.328203, Mean IoU Without Background: 0.231373
+Learning rate: 3.703580367172257e-05
+Epoch 135/200
+----------
+Train Loss: 0.683343 Acc: 85.648221, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 17, 61, 0, 22, 26], Total classifications: 126
+Val Loss: 0.736732 Acc: 83.544973, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8196), tensor(0.), tensor(0.4760), tensor(0.), tensor(0.3299), tensor(0.3998)], Mean IoU: 0.337565, Mean IoU Without Background: 0.241153
+Learning rate: 3.653038524138135e-05
+Epoch 136/200
+----------
+Train Loss: 0.684569 Acc: 85.735829, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.51it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 20, 61, 0, 21, 24], Total classifications: 126
+Val Loss: 0.752265 Acc: 83.156646, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8165), tensor(0.), tensor(0.4854), tensor(0.), tensor(0.3090), tensor(0.4001)], Mean IoU: 0.335168, Mean IoU Without Background: 0.238899
+Learning rate: 3.602418861352938e-05
+Epoch 137/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.67it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+Train Loss: 0.673687 Acc: 85.846304, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.47it/s]
+Val Classification Accuracy: 0.8413
+Statistics for each class: [0, 19, 59, 0, 22, 26], Total classifications: 126
+Val Loss: 0.757604 Acc: 82.906060, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8148), tensor(0.), tensor(0.4665), tensor(0.), tensor(0.3164), tensor(0.4097)], Mean IoU: 0.334572, Mean IoU Without Background: 0.238517
+Learning rate: 3.551720040136008e-05
+Epoch 138/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.77it/s] 70%|███████   | 21/30 [00:10<00:04,  2.12it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+Train Loss: 0.680633 Acc: 85.581996, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 20, 57, 0, 21, 28], Total classifications: 126
+Val Loss: 0.745221 Acc: 84.035937, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8245), tensor(0.), tensor(0.5035), tensor(0.), tensor(0.3092), tensor(0.3970)], Mean IoU: 0.339039, Mean IoU Without Background: 0.241953
+Learning rate: 3.5009406771431124e-05
+Epoch 139/200
+----------
+Train Loss: 0.672548 Acc: 85.812779, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.47it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 18, 60, 0, 21, 27], Total classifications: 126
+Val Loss: 0.730155 Acc: 84.009125, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8210), tensor(0.), tensor(0.5371), tensor(0.), tensor(0.3263), tensor(0.4399)], Mean IoU: 0.354056, Mean IoU Without Background: 0.260665
+Saved new best model at epoch 139 with Mean IoU: 0.354056
+Learning rate: 3.450079342131094e-05
+Epoch 140/200
+----------
+Train Loss: 0.684294 Acc: 85.728766, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.60it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 21, 58, 0, 21, 26], Total classifications: 126
+Val Loss: 0.745526 Acc: 83.750355, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8221), tensor(0.), tensor(0.4916), tensor(0.), tensor(0.3239), tensor(0.4289)], Mean IoU: 0.344421, Mean IoU Without Background: 0.248887
+Learning rate: 3.3991345555721224e-05
+Epoch 141/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.76it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 0.671852 Acc: 85.906937, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 17, 60, 0, 21, 28], Total classifications: 126
+Val Loss: 0.750503 Acc: 84.354395, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8287), tensor(0.), tensor(0.5171), tensor(0.), tensor(0.3402), tensor(0.4103)], Mean IoU: 0.349377, Mean IoU Without Background: 0.253505
+Learning rate: 3.3481047861047455e-05
+Epoch 142/200
+----------
+Train Loss: 0.676429 Acc: 85.659320, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.49it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 20, 57, 0, 21, 28], Total classifications: 126
+Val Loss: 0.750500 Acc: 83.719465, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8194), tensor(0.), tensor(0.5128), tensor(0.), tensor(0.3276), tensor(0.4196)], Mean IoU: 0.346581, Mean IoU Without Background: 0.252010
+Learning rate: 3.2969884478076204e-05
+Epoch 143/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:14,  1.57it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.03it/s]100%|██████████| 30/30 [00:14<00:00,  2.09it/s]
+Train Loss: 0.664554 Acc: 85.873237, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.8413
+Statistics for each class: [0, 19, 59, 0, 22, 26], Total classifications: 126
+Val Loss: 0.742576 Acc: 82.626682, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8087), tensor(0.), tensor(0.5123), tensor(0.), tensor(0.2930), tensor(0.3947)], Mean IoU: 0.334794, Mean IoU Without Background: 0.240013
+Learning rate: 3.245783897280314e-05
+Epoch 144/200
+----------
+Train Loss: 0.672753 Acc: 85.534824, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 18, 58, 0, 22, 28], Total classifications: 126
+Val Loss: 0.732208 Acc: 83.335834, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8159), tensor(0.), tensor(0.5070), tensor(0.), tensor(0.3213), tensor(0.3928)], Mean IoU: 0.339481, Mean IoU Without Background: 0.244204
+Learning rate: 3.1944894305139e-05
+Epoch 145/200
+----------
+Train Loss: 0.672975 Acc: 85.776302, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.67it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.51it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 21, 56, 0, 21, 28], Total classifications: 126
+Val Loss: 0.739060 Acc: 83.530538, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8168), tensor(0.), tensor(0.5127), tensor(0.), tensor(0.3408), tensor(0.4361)], Mean IoU: 0.351086, Mean IoU Without Background: 0.257933
+Learning rate: 3.1431032795321605e-05
+Epoch 146/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+Train Loss: 0.668138 Acc: 85.839934, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.51it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 22, 56, 0, 22, 26], Total classifications: 126
+Val Loss: 0.724164 Acc: 83.674794, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8206), tensor(0.), tensor(0.5081), tensor(0.), tensor(0.3348), tensor(0.4148)], Mean IoU: 0.346393, Mean IoU Without Background: 0.251545
+Learning rate: 3.0916236087821276e-05
+Epoch 147/200
+----------
+Train Loss: 0.668909 Acc: 85.504132, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.76it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.51it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 20, 59, 0, 21, 26], Total classifications: 126
+Val Loss: 0.732996 Acc: 83.508776, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8191), tensor(0.), tensor(0.5238), tensor(0.), tensor(0.3074), tensor(0.3619)], Mean IoU: 0.335374, Mean IoU Without Background: 0.238622
+Learning rate: 3.0400485112502357e-05
+Epoch 148/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.666329 Acc: 85.852710, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.8333
+Statistics for each class: [0, 19, 60, 0, 22, 25], Total classifications: 126
+Val Loss: 0.731647 Acc: 83.755036, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8232), tensor(0.), tensor(0.5118), tensor(0.), tensor(0.3190), tensor(0.3914)], Mean IoU: 0.340890, Mean IoU Without Background: 0.244434
+Learning rate: 2.988376004277662e-05
+Epoch 149/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.655148 Acc: 85.859416, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 21, 59, 0, 21, 25], Total classifications: 126
+Val Loss: 0.728241 Acc: 83.951511, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8250), tensor(0.), tensor(0.4937), tensor(0.), tensor(0.3040), tensor(0.4029)], Mean IoU: 0.337599, Mean IoU Without Background: 0.240120
+Learning rate: 2.936604025045313e-05
+Epoch 150/200
+----------
+Train Loss: 0.674001 Acc: 85.360231, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 20, 57, 0, 20, 29], Total classifications: 126
+Val Loss: 0.755346 Acc: 83.927412, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8242), tensor(0.), tensor(0.4874), tensor(0.), tensor(0.3057), tensor(0.4063)], Mean IoU: 0.337271, Mean IoU Without Background: 0.239893
+Learning rate: 2.8847304256953684e-05
+Epoch 151/200
+----------
+Train Loss: 0.655158 Acc: 86.249223, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 23, 56, 0, 22, 25], Total classifications: 126
+Val Loss: 0.723103 Acc: 84.230729, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8256), tensor(0.), tensor(0.5100), tensor(0.), tensor(0.3532), tensor(0.4262)], Mean IoU: 0.352504, Mean IoU Without Background: 0.257879
+Learning rate: 2.8327529680522708e-05
+Epoch 152/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 0.661973 Acc: 85.710806, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.7937
+Statistics for each class: [0, 22, 57, 0, 21, 26], Total classifications: 126
+Val Loss: 0.757422 Acc: 83.378174, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8182), tensor(0.), tensor(0.4893), tensor(0.), tensor(0.3247), tensor(0.4073)], Mean IoU: 0.339913, Mean IoU Without Background: 0.244256
+Learning rate: 2.7806693179014064e-05
+Epoch 153/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.654167 Acc: 86.037688, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.53it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 18, 60, 0, 21, 27], Total classifications: 126
+Val Loss: 0.731178 Acc: 82.933629, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8108), tensor(0.), tensor(0.5203), tensor(0.), tensor(0.3307), tensor(0.4007)], Mean IoU: 0.343750, Mean IoU Without Background: 0.250339
+Learning rate: 2.728477038778411e-05
+Epoch 154/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 0.655519 Acc: 86.056977, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.47it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 19, 61, 0, 20, 26], Total classifications: 126
+Val Loss: 0.726240 Acc: 83.491568, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8181), tensor(0.), tensor(0.4816), tensor(0.), tensor(0.3278), tensor(0.3857)], Mean IoU: 0.335551, Mean IoU Without Background: 0.239034
+Learning rate: 2.6761735852159364e-05
+Epoch 155/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.660007 Acc: 85.792760, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.8413
+Statistics for each class: [0, 21, 57, 0, 22, 26], Total classifications: 126
+Val Loss: 0.739523 Acc: 82.504557, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8080), tensor(0.), tensor(0.4970), tensor(0.), tensor(0.3295), tensor(0.3755)], Mean IoU: 0.334983, Mean IoU Without Background: 0.240374
+Learning rate: 2.6237562953876088e-05
+Epoch 156/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.67it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+Train Loss: 0.653880 Acc: 85.945241, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.61it/s]
+Val Classification Accuracy: 0.8333
+Statistics for each class: [0, 17, 58, 0, 22, 29], Total classifications: 126
+Val Loss: 0.731963 Acc: 82.833245, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8118), tensor(0.), tensor(0.5097), tensor(0.), tensor(0.3166), tensor(0.4258)], Mean IoU: 0.343972, Mean IoU Without Background: 0.250405
+Learning rate: 2.5712223830807747e-05
+Epoch 157/200
+----------
+Train Loss: 0.648585 Acc: 85.968043, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.50it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 20, 58, 0, 22, 26], Total classifications: 126
+Val Loss: 0.717805 Acc: 83.463312, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8174), tensor(0.), tensor(0.5112), tensor(0.), tensor(0.3352), tensor(0.3939)], Mean IoU: 0.342941, Mean IoU Without Background: 0.248054
+Learning rate: 2.5185689289201024e-05
+Epoch 158/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 0.652631 Acc: 85.717788, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.45it/s]
+Val Classification Accuracy: 0.8333
+Statistics for each class: [0, 22, 56, 0, 22, 26], Total classifications: 126
+Val Loss: 0.717646 Acc: 83.755638, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8212), tensor(0.), tensor(0.5188), tensor(0.), tensor(0.3136), tensor(0.4148)], Mean IoU: 0.344732, Mean IoU Without Background: 0.249439
+Learning rate: 2.465792870753034e-05
+Epoch 159/200
+----------
+Train Loss: 0.654943 Acc: 86.005752, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 19, 57, 0, 22, 28], Total classifications: 126
+Val Loss: 0.732433 Acc: 84.083345, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8245), tensor(0.), tensor(0.5347), tensor(0.), tensor(0.3418), tensor(0.4081)], Mean IoU: 0.351510, Mean IoU Without Background: 0.256916
+Learning rate: 2.4128909930951517e-05
+Epoch 160/200
+----------
+Train Loss: 0.659786 Acc: 85.437014, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:13<00:00,  2.14it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 20, 58, 0, 22, 26], Total classifications: 126
+Val Loss: 0.718828 Acc: 83.983464, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8241), tensor(0.), tensor(0.4871), tensor(0.), tensor(0.3489), tensor(0.3896)], Mean IoU: 0.341605, Mean IoU Without Background: 0.245116
+Learning rate: 2.3598599155183024e-05
+Epoch 161/200
+----------
+Train Loss: 0.649687 Acc: 86.071080, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.60it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.46it/s]
+Val Classification Accuracy: 0.7857
+Statistics for each class: [0, 19, 61, 0, 22, 24], Total classifications: 126
+Val Loss: 0.724339 Acc: 84.323465, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8310), tensor(0.), tensor(0.5070), tensor(0.), tensor(0.3347), tensor(0.3855)], Mean IoU: 0.343050, Mean IoU Without Background: 0.245452
+Learning rate: 2.3066960798464385e-05
+Epoch 162/200
+----------
+Train Loss: 0.651903 Acc: 85.767733, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.74it/s] 70%|███████   | 21/30 [00:10<00:04,  2.10it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 20, 58, 0, 22, 26], Total classifications: 126
+Val Loss: 0.719946 Acc: 84.036912, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8264), tensor(0.), tensor(0.4828), tensor(0.), tensor(0.3467), tensor(0.3632)], Mean IoU: 0.336525, Mean IoU Without Background: 0.238554
+Learning rate: 2.2533957360029752e-05
+Epoch 163/200
+----------
+Train Loss: 0.657187 Acc: 85.559735, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 18, 58, 0, 22, 28], Total classifications: 126
+Val Loss: 0.711656 Acc: 83.616072, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8195), tensor(0.), tensor(0.5032), tensor(0.), tensor(0.3317), tensor(0.3933)], Mean IoU: 0.341294, Mean IoU Without Background: 0.245647
+Learning rate: 2.1999549263283176e-05
+Epoch 164/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.646935 Acc: 86.169444, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.47it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 18, 59, 0, 22, 27], Total classifications: 126
+Val Loss: 0.724841 Acc: 83.658945, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8216), tensor(0.), tensor(0.5181), tensor(0.), tensor(0.3485), tensor(0.3970)], Mean IoU: 0.347531, Mean IoU Without Background: 0.252722
+Learning rate: 2.1463694681562834e-05
+Epoch 165/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.655440 Acc: 85.676605, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.49it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 19, 58, 0, 22, 27], Total classifications: 126
+Val Loss: 0.717679 Acc: 83.251257, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8176), tensor(0.), tensor(0.4937), tensor(0.), tensor(0.3411), tensor(0.3630)], Mean IoU: 0.335900, Mean IoU Without Background: 0.239567
+Learning rate: 2.0926349344022242e-05
+Epoch 166/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 0.642017 Acc: 86.093641, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.50it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 19, 58, 0, 21, 28], Total classifications: 126
+Val Loss: 0.737754 Acc: 83.057764, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8115), tensor(0.), tensor(0.5050), tensor(0.), tensor(0.3265), tensor(0.4173)], Mean IoU: 0.343374, Mean IoU Without Background: 0.249746
+Learning rate: 2.0387466318725133e-05
+Epoch 167/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.635618 Acc: 86.179446, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.8413
+Statistics for each class: [0, 22, 56, 0, 22, 26], Total classifications: 126
+Val Loss: 0.722701 Acc: 83.289152, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8173), tensor(0.), tensor(0.5019), tensor(0.), tensor(0.3284), tensor(0.4104)], Mean IoU: 0.343002, Mean IoU Without Background: 0.248151
+Learning rate: 1.9846995769528234e-05
+Epoch 168/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.76it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 0.648635 Acc: 85.876938, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 20, 58, 0, 21, 27], Total classifications: 126
+Val Loss: 0.721847 Acc: 83.484023, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8178), tensor(0.), tensor(0.5193), tensor(0.), tensor(0.3233), tensor(0.3582)], Mean IoU: 0.336438, Mean IoU Without Background: 0.240158
+Learning rate: 1.930488468269145e-05
+Epoch 169/200
+----------
+Train Loss: 0.648661 Acc: 85.859602, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 22, 55, 0, 21, 28], Total classifications: 126
+Val Loss: 0.735309 Acc: 83.931175, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8260), tensor(0.), tensor(0.5009), tensor(0.), tensor(0.3180), tensor(0.4246)], Mean IoU: 0.344940, Mean IoU Without Background: 0.248722
+Learning rate: 1.8761076558379142e-05
+Epoch 170/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 0.639739 Acc: 86.009759, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.8333
+Statistics for each class: [0, 19, 58, 0, 22, 27], Total classifications: 126
+Val Loss: 0.693730 Acc: 83.950382, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8229), tensor(0.), tensor(0.4931), tensor(0.), tensor(0.3300), tensor(0.3888)], Mean IoU: 0.339137, Mean IoU Without Background: 0.242378
+Learning rate: 1.821551106126149e-05
+Epoch 171/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.09it/s]
+Train Loss: 0.643860 Acc: 85.894636, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 19, 59, 0, 22, 26], Total classifications: 126
+Val Loss: 0.729304 Acc: 83.500935, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8202), tensor(0.), tensor(0.5025), tensor(0.), tensor(0.3374), tensor(0.3832)], Mean IoU: 0.340559, Mean IoU Without Background: 0.244634
+Learning rate: 1.7668123623244655e-05
+Epoch 172/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.647941 Acc: 85.846285, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.48it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 22, 55, 0, 21, 28], Total classifications: 126
+Val Loss: 0.746717 Acc: 83.362782, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8146), tensor(0.), tensor(0.5477), tensor(0.), tensor(0.3129), tensor(0.4053)], Mean IoU: 0.346753, Mean IoU Without Background: 0.253178
+Learning rate: 1.7118844989887375e-05
+Epoch 173/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+Train Loss: 0.634622 Acc: 86.211137, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.49it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 21, 56, 0, 21, 28], Total classifications: 126
+Val Loss: 0.738730 Acc: 82.936765, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8132), tensor(0.), tensor(0.4908), tensor(0.), tensor(0.3061), tensor(0.4043)], Mean IoU: 0.335731, Mean IoU Without Background: 0.240228
+Learning rate: 1.6567600700216862e-05
+Epoch 174/200
+----------
+Train Loss: 0.637084 Acc: 86.056740, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.60it/s]
+Val Classification Accuracy: 0.8333
+Statistics for each class: [0, 20, 57, 0, 22, 27], Total classifications: 126
+Val Loss: 0.711061 Acc: 83.575733, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8209), tensor(0.), tensor(0.4641), tensor(0.), tensor(0.3548), tensor(0.4035)], Mean IoU: 0.340561, Mean IoU Without Background: 0.244486
+Learning rate: 1.601431048732521e-05
+Epoch 175/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.645693 Acc: 85.971399, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.47it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 20, 56, 0, 22, 28], Total classifications: 126
+Val Loss: 0.730156 Acc: 83.326966, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8169), tensor(0.), tensor(0.4984), tensor(0.), tensor(0.3161), tensor(0.4038)], Mean IoU: 0.339198, Mean IoU Without Background: 0.243666
+Learning rate: 1.54588875841566e-05
+Epoch 176/200
+----------
+Train Loss: 0.633624 Acc: 86.087379, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 18, 59, 0, 22, 27], Total classifications: 126
+Val Loss: 0.712659 Acc: 83.623465, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8209), tensor(0.), tensor(0.4831), tensor(0.), tensor(0.3476), tensor(0.4328)], Mean IoU: 0.347385, Mean IoU Without Background: 0.252677
+Learning rate: 1.490123791507811e-05
+Epoch 177/200
+----------
+Train Loss: 0.632978 Acc: 86.167027, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:14,  1.57it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 20, 57, 0, 21, 28], Total classifications: 126
+Val Loss: 0.709690 Acc: 84.077696, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8261), tensor(0.), tensor(0.5245), tensor(0.), tensor(0.3247), tensor(0.4186)], Mean IoU: 0.348981, Mean IoU Without Background: 0.253559
+Learning rate: 1.4341259148875243e-05
+Epoch 178/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.70it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.636237 Acc: 86.129864, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.57it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 21, 58, 0, 20, 27], Total classifications: 126
+Val Loss: 0.728075 Acc: 83.852114, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8215), tensor(0.), tensor(0.5206), tensor(0.), tensor(0.3548), tensor(0.4211)], Mean IoU: 0.353006, Mean IoU Without Background: 0.259303
+Learning rate: 1.377883958232651e-05
+Epoch 179/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.73it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 0.641861 Acc: 85.778787, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.50it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 20, 59, 0, 21, 26], Total classifications: 126
+Val Loss: 0.721981 Acc: 84.095634, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8246), tensor(0.), tensor(0.5131), tensor(0.), tensor(0.3472), tensor(0.4027)], Mean IoU: 0.347938, Mean IoU Without Background: 0.252607
+Learning rate: 1.3213856814921427e-05
+Epoch 180/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.626293 Acc: 86.290277, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.56it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 20, 56, 0, 23, 27], Total classifications: 126
+Val Loss: 0.745455 Acc: 83.264048, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8149), tensor(0.), tensor(0.4911), tensor(0.), tensor(0.3367), tensor(0.4415)], Mean IoU: 0.347366, Mean IoU Without Background: 0.253869
+Learning rate: 1.2646176163778276e-05
+Epoch 181/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.77it/s] 70%|███████   | 21/30 [00:10<00:04,  2.12it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+Train Loss: 0.626404 Acc: 86.332011, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.58it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 21, 57, 0, 22, 26], Total classifications: 126
+Val Loss: 0.721482 Acc: 83.837358, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8224), tensor(0.), tensor(0.5040), tensor(0.), tensor(0.3357), tensor(0.3884)], Mean IoU: 0.341738, Mean IoU Without Background: 0.245615
+Learning rate: 1.2075648752202132e-05
+Epoch 182/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.639536 Acc: 85.823248, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 21, 57, 0, 22, 26], Total classifications: 126
+Val Loss: 0.728899 Acc: 83.171451, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8175), tensor(0.), tensor(0.4908), tensor(0.), tensor(0.3412), tensor(0.3757)], Mean IoU: 0.337535, Mean IoU Without Background: 0.241538
+Learning rate: 1.1502109183840203e-05
+Epoch 183/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.13it/s]
+Train Loss: 0.627830 Acc: 86.339914, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.53it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 18, 59, 0, 22, 27], Total classifications: 126
+Val Loss: 0.717366 Acc: 83.426948, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8190), tensor(0.), tensor(0.5058), tensor(0.), tensor(0.3270), tensor(0.3973)], Mean IoU: 0.341498, Mean IoU Without Background: 0.246005
+Learning rate: 1.0925372684381051e-05
+Epoch 184/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.75it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.15it/s]
+Train Loss: 0.640272 Acc: 85.722616, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.49it/s]
+Val Classification Accuracy: 0.8333
+Statistics for each class: [0, 22, 56, 0, 22, 26], Total classifications: 126
+Val Loss: 0.734687 Acc: 83.089995, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8134), tensor(0.), tensor(0.5062), tensor(0.), tensor(0.3420), tensor(0.3627)], Mean IoU: 0.337384, Mean IoU Without Background: 0.242172
+Learning rate: 1.0345231550116032e-05
+Epoch 185/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.633062 Acc: 86.131426, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.46it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 20, 59, 0, 20, 27], Total classifications: 126
+Val Loss: 0.730954 Acc: 83.680335, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8206), tensor(0.), tensor(0.5051), tensor(0.), tensor(0.3579), tensor(0.4062)], Mean IoU: 0.348304, Mean IoU Without Background: 0.253837
+Learning rate: 9.761450680998189e-06
+Epoch 186/200
+----------
+Train Loss: 0.636068 Acc: 86.188724, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.46it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 22, 57, 0, 20, 27], Total classifications: 126
+Val Loss: 0.710665 Acc: 84.058359, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8230), tensor(0.), tensor(0.5237), tensor(0.), tensor(0.3386), tensor(0.4245)], Mean IoU: 0.351632, Mean IoU Without Background: 0.257353
+Learning rate: 9.173761884716827e-06
+Epoch 187/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+Train Loss: 0.636053 Acc: 85.938226, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.54it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 21, 55, 0, 22, 28], Total classifications: 126
+Val Loss: 0.710192 Acc: 83.702472, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8214), tensor(0.), tensor(0.5198), tensor(0.), tensor(0.3249), tensor(0.3995)], Mean IoU: 0.344275, Mean IoU Without Background: 0.248845
+Learning rate: 8.5818565005659e-06
+Epoch 188/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.72it/s] 70%|███████   | 21/30 [00:10<00:04,  2.09it/s]100%|██████████| 30/30 [00:14<00:00,  2.14it/s]
+Train Loss: 0.636476 Acc: 86.115640, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.59it/s]
+Val Classification Accuracy: 0.8254
+Statistics for each class: [0, 17, 59, 0, 22, 28], Total classifications: 126
+Val Loss: 0.739648 Acc: 82.416238, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8080), tensor(0.), tensor(0.4899), tensor(0.), tensor(0.3267), tensor(0.3810)], Mean IoU: 0.334294, Mean IoU Without Background: 0.239547
+Learning rate: 7.985375678160185e-06
+Epoch 189/200
+----------
+Train Loss: 0.635888 Acc: 86.000948, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.68it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.46it/s]
+Val Classification Accuracy: 0.8333
+Statistics for each class: [0, 17, 59, 0, 22, 28], Total classifications: 126
+Val Loss: 0.685340 Acc: 84.485832, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8299), tensor(0.), tensor(0.4958), tensor(0.), tensor(0.3410), tensor(0.4115)], Mean IoU: 0.346390, Mean IoU Without Background: 0.249684
+Learning rate: 7.383897304441108e-06
+Epoch 190/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:11,  1.76it/s] 70%|███████   | 21/30 [00:10<00:04,  2.11it/s]100%|██████████| 30/30 [00:13<00:00,  2.16it/s]
+Train Loss: 0.640946 Acc: 86.094389, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 18, 59, 0, 21, 28], Total classifications: 126
+Val Loss: 0.705300 Acc: 84.040860, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8230), tensor(0.), tensor(0.5303), tensor(0.), tensor(0.3246), tensor(0.4120)], Mean IoU: 0.348303, Mean IoU Without Background: 0.253362
+Learning rate: 6.77691800744829e-06
+Epoch 191/200
+----------
+Train Loss: 0.642968 Acc: 85.464579, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.69it/s] 70%|███████   | 21/30 [00:10<00:04,  2.07it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.61it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 18, 58, 0, 21, 29], Total classifications: 126
+Val Loss: 0.718645 Acc: 83.168887, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8142), tensor(0.), tensor(0.4957), tensor(0.), tensor(0.3495), tensor(0.3922)], Mean IoU: 0.341935, Mean IoU Without Background: 0.247488
+Learning rate: 6.163827693217455e-06
+Epoch 192/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.636265 Acc: 86.066019, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 18, 58, 0, 21, 29], Total classifications: 126
+Val Loss: 0.720935 Acc: 83.166462, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8157), tensor(0.), tensor(0.4954), tensor(0.), tensor(0.3341), tensor(0.3935)], Mean IoU: 0.339791, Mean IoU Without Background: 0.244612
+Learning rate: 5.543872319603775e-06
+Epoch 193/200
+----------
+Train Loss: 0.631077 Acc: 86.011908, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.66it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.62it/s]
+Val Classification Accuracy: 0.8413
+Statistics for each class: [0, 20, 61, 0, 22, 23], Total classifications: 126
+Val Loss: 0.717845 Acc: 83.543130, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8185), tensor(0.), tensor(0.5359), tensor(0.), tensor(0.3364), tensor(0.3935)], Mean IoU: 0.347380, Mean IoU Without Background: 0.253166
+Learning rate: 4.916097269833219e-06
+Epoch 194/200
+----------
+Train Loss: 0.632037 Acc: 86.116767, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.66it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.55it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 17, 57, 0, 21, 31], Total classifications: 126
+Val Loss: 0.709512 Acc: 84.095752, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8248), tensor(0.), tensor(0.5595), tensor(0.), tensor(0.3736), tensor(0.4195)], Mean IoU: 0.362929, Mean IoU Without Background: 0.270546
+Saved new best model at epoch 194 with Mean IoU: 0.362929
+Learning rate: 4.279256870117421e-06
+Epoch 195/200
+----------
+Train Loss: 0.630675 Acc: 85.986085, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.71it/s] 70%|███████   | 21/30 [00:10<00:04,  2.08it/s]100%|██████████| 30/30 [00:14<00:00,  2.12it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.46it/s]
+Val Classification Accuracy: 0.8175
+Statistics for each class: [0, 21, 56, 0, 22, 27], Total classifications: 126
+Val Loss: 0.723370 Acc: 83.683489, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8207), tensor(0.), tensor(0.5076), tensor(0.), tensor(0.3404), tensor(0.4174)], Mean IoU: 0.347687, Mean IoU Without Background: 0.253075
+Learning rate: 3.6316604390837047e-06
+Epoch 196/200
+----------
+Train Loss: 0.628169 Acc: 86.190292, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.58it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.40it/s]
+Val Classification Accuracy: 0.8333
+Statistics for each class: [0, 22, 56, 0, 22, 26], Total classifications: 126
+Val Loss: 0.709426 Acc: 83.633302, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8181), tensor(0.), tensor(0.5245), tensor(0.), tensor(0.3574), tensor(0.3938)], Mean IoU: 0.348958, Mean IoU Without Background: 0.255124
+Learning rate: 2.9708876159204244e-06
+Epoch 197/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:14,  1.56it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.03it/s]100%|██████████| 30/30 [00:14<00:00,  2.08it/s]
+Train Loss: 0.630148 Acc: 86.171899, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.42it/s]
+Val Classification Accuracy: 0.8016
+Statistics for each class: [0, 18, 57, 0, 22, 29], Total classifications: 126
+Val Loss: 0.719387 Acc: 83.724640, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8221), tensor(0.), tensor(0.4944), tensor(0.), tensor(0.3414), tensor(0.4168)], Mean IoU: 0.345779, Mean IoU Without Background: 0.250521
+Learning rate: 2.2931969763839765e-06
+Epoch 198/200
+----------
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.05it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+Train Loss: 0.636702 Acc: 85.953815, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.39it/s]
+Val Classification Accuracy: 0.8413
+Statistics for each class: [0, 19, 58, 0, 22, 27], Total classifications: 126
+Val Loss: 0.701505 Acc: 84.047814, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8262), tensor(0.), tensor(0.5107), tensor(0.), tensor(0.3416), tensor(0.4071)], Mean IoU: 0.347607, Mean IoU Without Background: 0.251893
+Learning rate: 1.5920592534606212e-06
+Epoch 199/200
+----------
+Train Loss: 0.629135 Acc: 86.044120, Memory allocated: 0.60 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 30%|███       | 9/30 [00:05<00:12,  1.67it/s] 70%|███████   | 21/30 [00:10<00:04,  2.06it/s]100%|██████████| 30/30 [00:14<00:00,  2.11it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.48it/s]
+Val Classification Accuracy: 0.8333
+Statistics for each class: [0, 19, 56, 0, 21, 30], Total classifications: 126
+Val Loss: 0.723907 Acc: 82.998006, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8119), tensor(0.), tensor(0.4967), tensor(0.), tensor(0.3508), tensor(0.3909)], Mean IoU: 0.341698, Mean IoU Without Background: 0.247663
+Learning rate: 8.531634293222179e-07
+Epoch 200/200
+----------
+Train Loss: 0.637352 Acc: 85.956586, Memory allocated: 0.59 GB, Max memory allocated: 24.66 GB
+  0%|          | 0/30 [00:00<?, ?it/s] 27%|██▋       | 8/30 [00:05<00:13,  1.59it/s] 67%|██████▋   | 20/30 [00:10<00:04,  2.04it/s]100%|██████████| 30/30 [00:14<00:00,  2.10it/s]
+  0%|          | 0/6 [00:00<?, ?it/s]100%|██████████| 6/6 [00:02<00:00,  2.43it/s]
+Val Classification Accuracy: 0.8095
+Statistics for each class: [0, 18, 59, 0, 21, 28], Total classifications: 126
+Val Loss: 0.697873 Acc: 84.150432, Memory allocated: 1.29 GB, Max memory allocated: 24.66 GB
+Iou per Class: [tensor(0.8257), tensor(0.), tensor(0.5081), tensor(0.), tensor(0.3493), tensor(0.3793)], Mean IoU: 0.343732, Mean IoU Without Background: 0.247339
+Learning rate: 0.0
+Best epoch 193, Best Loss 0.7095122195425487
+Total Training Time: 0.0 days, 1.0 hours, 0.0 minutes, 54.41 seconds
+任务成功结束

@@ -1,0 +1,70 @@
+running with Ivan deep learning work
+SLURM job ID: 132771
+dataset: project2024, number of classes: 30, classification task: True, Binary classification: False
+Backbone_type: vgg19
+预训练模型已经存在，无需下载。
+Task name: unet, num_workers: 4, batch_size: 24, train set ratio: 0.85
+Using device: cuda
+Using version: 2.2.1
+
+Device name: NVIDIA A100-PCIE-40GB
+Total memory: 39.39385986328125 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+optimizer name: sgd
+loss name:  ce
+Epoch 1/200
+----------
+  0%|          | 0/156 [00:00<?, ?it/s]  0%|          | 0/156 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 147, in <module>
+    train_model(model=model, 
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 331, in train_model
+    train(device = device, 
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 140, in train
+    outputs = model(now_image)
+              ^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/unet.py", line 153, in forward
+    x = self.up4(x, backbone_out['stage0'])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/unet.py", line 58, in forward
+    x = self.conv(x)
+        ^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/batchnorm.py", line 175, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/functional.py", line 2482, in batch_norm
+    return torch.batch_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.25 GiB. GPU 0 has a total capacity of 39.39 GiB of which 1.07 GiB is free. Including non-PyTorch memory, this process has 38.31 GiB memory in use. Of the allocated memory 36.55 GiB is allocated by PyTorch, and 1.26 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: a100-7: task 0: Exited with exit code 1
+任务失败或异常结束

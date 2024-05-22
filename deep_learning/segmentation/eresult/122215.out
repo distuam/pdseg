@@ -1,0 +1,22 @@
+running with Ivan deep learning work
+SLURM job ID: 122215
+dataset: ../../data/project2024/
+预训练模型已经存在，无需下载。
+预训练模型已经存在，无需下载。
+missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
+unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
+Task name: fcn  num_workers: 4  number of classes: 30 , train set ratio: 0.85
+Using device: cuda
+Using version: 2.2.1
+
+Device name: Tesla P100-PCIE-16GB
+Total memory: 15.8992919921875 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+optimizer name: sgd
+loss name:  ce
+Epoch 1/200
+----------
+  0%|          | 0/314 [00:00<?, ?it/s]  1%|          | 2/314 [00:05<14:53,  2.86s/it]  2%|▏         | 6/314 [00:11<09:09,  1.78s/it]  3%|▎         | 10/314 [00:16<08:02,  1.59s/it]  4%|▍         | 14/314 [00:22<07:33,  1.51s/it]  6%|▌         | 18/314 [00:28<07:15,  1.47s/it]  7%|▋         | 22/314 [00:33<07:02,  1.45s/it]  8%|▊         | 26/314 [00:39<06:52,  1.43s/it] 10%|▉         | 30/314 [00:45<06:44,  1.43s/it] 11%|█         | 34/314 [00:50<06:37,  1.42s/it] 12%|█▏        | 38/314 [00:56<06:30,  1.42s/it] 13%|█▎        | 42/314 [01:01<06:24,  1.41s/it] 15%|█▍        | 46/314 [01:07<06:18,  1.41s/it] 16%|█▌        | 50/314 [01:13<06:12,  1.41s/it] 17%|█▋        | 54/314 [01:18<06:06,  1.41s/it] 18%|█▊        | 58/314 [01:24<06:00,  1.41s/it] 20%|█▉        | 62/314 [01:30<05:54,  1.41s/it] 21%|██        | 66/314 [01:35<05:49,  1.41s/it] 22%|██▏       | 70/314 [01:41<05:43,  1.41s/it] 24%|██▎       | 74/314 [01:47<05:38,  1.41srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 122215 ON c4130-2 CANCELLED AT 2024-04-29T23:36:59 ***
+s/it] 25%|██▍       | 78/314 [01:52<05:32,  1.41s/it] 26%|██▌       | 82/314 [01:58<05:26,  1.41s/it]slurmstepd: error: *** STEP 122215.0 ON c4130-2 CANCELLED AT 2024-04-29T23:36:59 ***

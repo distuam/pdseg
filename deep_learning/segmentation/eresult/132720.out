@@ -1,0 +1,220 @@
+running with Ivan deep learning work
+SLURM job ID: 132720
+dataset: project2024, number of classes: 30, classification task: True, Binary classification: False
+Backbone_type: resnet101
+预训练模型已经存在，无需下载。
+预训练模型已经存在，无需下载。
+Missing keys:  ['classifier.4.weight', 'classifier.4.bias', 'classification_header.2.weight', 'classification_header.2.bias']
+Unexpected keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
+Task name: deeplab, num_workers: 4, batch_size: 18, train set ratio: 0.85
+Using device: cuda
+Using version: 2.2.1
+
+Device name: NVIDIA A100-PCIE-40GB
+Total memory: 39.39385986328125 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+optimizer name: sgd
+loss name:  ce
+Epoch 1/200
+----------
+  0%|          | 0/208 [00:00<?, ?it/s]  2%|▏         | 5/208 [00:05<03:28,  1.03s/it]  6%|▋         | 13/208 [00:10<02:27,  1.32it/s] 10%|█         | 21/208 [00:15<02:10,  1.43it/s] 14%|█▍        | 29/208 [00:20<02:00,  1.49it/s] 18%|█▊        | 37/208 [00:25<01:52,  1.51it/s] 22%|██▏       | 45/208 [00:30<01:46,  1.53it/s] 25%|██▌       | 53/208 [00:35<01:40,  1.54it/s] 29%|██▉       | 61/208 [00:40<01:35,  1.55it/s] 33%|███▎      | 69/208 [00:46<01:29,  1.55it/s] 37%|███▋      | 77/208 [00:51<01:24,  1.55it/s] 41%|████      | 85/208 [00:56<01:19,  1.55it/s] 45%|████▍     | 93/208 [01:01<01:13,  1.55it/s] 49%|████▊     | 101/208 [01:06<01:08,  1.55it/s] 52%|█████▏    | 109/208 [01:11<01:03,  1.55it/s] 56%|█████▋    | 117/208 [01:16<00:58,  1.55it/s] 60%|██████    | 125/208 [01:22<00:53,  1.55it/s] 64%|██████▍   | 133/208 [01:27<00:48,  1.55it/s] 68%|██████▊   | 141/208 [01:32<00:43,  1.55it/s] 72%|███████▏  | 149/208 [01:37<00:38,  1.55it/s] 75%|███████▌  | 157/208 [01:42<00:32,  1.55it/s] 79%|███████▉  | 165/208 [01:47<00:27,  1.55it/s] 83%|████████▎ | 173/208 [01:53<00:22,  1.55it/s] 87%|████████▋ | 181/208 [01:58<00:17,  1.55it/s] 91%|█████████ | 189/208 [02:03<00:12,  1.55it/s] 95%|█████████▍| 197/208 [02:08<00:07,  1.55it/s] 99%|█████████▊| 205/208 [02:13<00:01,  1.55it/s]100%|██████████| 208/208 [02:15<00:00,  1.53it/s]
+Train Loss: 3.547143 Acc: 67.575297, Memory allocated: 1.35 GB, Max memory allocated: 34.93 GB
+  0%|          | 0/36 [00:00<?, ?it/s] 36%|███▌      | 13/36 [00:04<00:07,  3.02it/s] 94%|█████████▍| 34/36 [00:08<00:00,  4.20it/s]100%|██████████| 36/36 [00:08<00:00,  4.07it/s]
+131193489 169869312 tensor(131193489) tensor(169869312)
+0 337909 tensor(337909) tensor(0)
+0 4156161 tensor(4156161) tensor(0)
+0 184050 tensor(184050) tensor(0)
+0 1093097 tensor(1093097) tensor(0)
+0 822191 tensor(822191) tensor(0)
+0 1152802 tensor(1152802) tensor(0)
+0 2134177 tensor(2134177) tensor(0)
+0 1133399 tensor(1133399) tensor(0)
+0 112194 tensor(112194) tensor(0)
+0 3599583 tensor(3599583) tensor(0)
+0 1404967 tensor(1404967) tensor(0)
+0 1797627 tensor(1797627) tensor(0)
+0 538695 tensor(538695) tensor(0)
+0 648900 tensor(648900) tensor(0)
+0 1930574 tensor(1930574) tensor(0)
+0 411417 tensor(411417) tensor(0)
+0 3719777 tensor(3719777) tensor(0)
+0 1844910 tensor(1844910) tensor(0)
+0 643020 tensor(643020) tensor(0)
+0 2337750 tensor(2337750) tensor(0)
+0 917745 tensor(917745) tensor(0)
+0 693833 tensor(693833) tensor(0)
+0 458758 tensor(458758) tensor(0)
+0 40780 tensor(40780) tensor(0)
+0 1828860 tensor(1828860) tensor(0)
+0 2255964 tensor(2255964) tensor(0)
+0 1262578 tensor(1262578) tensor(0)
+0 420463 tensor(420463) tensor(0)
+0 793642 tensor(793642) tensor(0)
+Total Validation Classification Accuracy: 0.1049
+Validation Summary - Loss: 2.6793,Segmentation Accuracy: 77.2320, Mean F1 Score: 2.9051, Mean IoU: 2.5744, Mean IoU Without Background: 0.0000, Memory Usage: Allocated: 5.64 GB, Max Allocated: 34.93 GB
+Class                                          IoU       Segmentation Acc    Fscore    Classification Acc  
++---------------------------------------------------------------------------------------------------------------+
+background                                     0.7723    0.7723              0.8715    0.0000              
+maple tar spot                                 0.0000    0.9980              0.0000    0.0000              
+grape downy mildew                             0.0000    0.9755              0.0000    0.0000              
+plum pocket disease                            0.0000    0.9989              0.0000    0.0000              
+tomato yellow leaf curl virus                  0.0000    0.9936              0.0000    0.0000              
+apple black rot                                0.0000    0.9952              0.0000    0.0000              
+blueberry rust                                 0.0000    0.9932              0.0000    0.0000              
+corn gray leaf spot                            0.0000    0.9874              0.0000    0.0000              
+cabbage alternaria leaf spot                   0.0000    0.9933              0.0000    0.0000              
+celery anthracnose                             0.0000    0.9993              0.0000    0.0000              
+cucumber angular leaf spot                     0.0000    0.9788              0.0000    0.0000              
+peach leaf curl                                0.0000    0.9917              0.0000    0.0000              
+citrus canker                                  0.0000    0.9894              0.0000    1.0000              
+rice blast                                     0.0000    0.9968              0.0000    0.0000              
+bean halo blight                               0.0000    0.9962              0.0000    0.0000              
+tomato late blight                             0.0000    0.9886              0.0000    0.0000              
+strawberry anthracnose                         0.0000    0.9976              0.0000    0.0000              
+corn smut                                      0.0000    0.9781              0.0000    0.0000              
+grapevine leafroll disease                     0.0000    0.9891              0.0000    0.0000              
+garlic leaf blight                             0.0000    0.9962              0.0000    0.0000              
+tobacco mosaic virus                           0.0000    0.9862              0.0000    0.0000              
+grape black rot                                0.0000    0.9946              0.0000    0.0000              
+bell pepper leaf spot                          0.0000    0.9959              0.0000    0.0000              
+basil downy mildew                             0.0000    0.9973              0.0000    0.0000              
+ginger leaf spot                               0.0000    0.9998              0.0000    0.0000              
+coffee leaf rust                               0.0000    0.9892              0.0000    0.0000              
+cucumber powdery mildew                        0.0000    0.9867              0.0000    0.0000              
+cauliflower alternaria leaf spot               0.0000    0.9926              0.0000    0.0000              
+carrot cavity spot                             0.0000    0.9975              0.0000    0.0000              
+potato late blight                             0.0000    0.9953              0.0000    0.0000              
+
+Saved new best model at epoch 1 with Mean IoU: 2.574400
+Learning rate: 0.001
+Epoch 2/200
+----------
+  0%|          | 0/208 [00:00<?, ?it/s]  3%|▎         | 6/208 [00:05<02:51,  1.18it/s]  7%|▋         | 14/208 [00:10<02:18,  1.40it/s] 11%|█         | 22/208 [00:15<02:06,  1.47it/s] 14%|█▍        | 30/208 [00:20<01:58,  1.51it/s] 18%|█▊        | 38/208 [00:25<01:51,  1.52it/s] 22%|██▏       | 46/208 [00:30<01:45,  1.53it/s] 26%|██▌       | 54/208 [00:35<01:40,  1.54it/s] 30%|██▉       | 62/208 [00:41<01:34,  1.54it/s] 34%|███▎      | 70/208 [00:46<01:29,  1.54it/s] 38%|███▊      | 78/208 [00:51<01:24,  1.55it/s] 41%|████▏     | 86/208 [00:56<01:18,  1.55it/s] 45%|████▌     | 94/208 [01:01<01:13,  1.55it/s] 49%|████▉     | 102/208 [01:06<01:08,  1.55it/s] 53%|█████▎    | 110/208 [01:12<01:03,  1.55it/s] 57%|█████▋    | 118/208 [01:17<00:58,  1.55it/s] 61%|██████    | 126/208 [01:22<00:53,  1.54it/s] 64%|██████▍   | 134/208 [01:27<00:47,  1.54it/s] 68%|██████▊   | 142/208 [01:32<00:42,  1.54it/s] 72%|███████▏  | 150/208 [01:38<00:37,  1.54it/s] 76%|███████▌  | 158/208 [01:43<00:32,  1.54it/s] 80%|███████▉  | 166/208 [01:48<00:27,  1.54it/s] 84%|████████▎ | 174/208 [01:53<00:22,  1.54it/s] 88%|████████▊ | 182/208 [01:58<00:16,  1.54it/s] 91%|█████████▏| 190/208 [02:04<00:11,  1.54it/s] 95%|█████████▌| 198/208 [02:09<00:06,  1.54it/s] 99%|█████████▉| 206/208 [02:14<00:01,  1.54it/s]100%|██████████| 208/208 [02:15<00:00,  1.53it/s]
+Train Loss: 2.636134 Acc: 76.693863, Memory allocated: 1.35 GB, Max memory allocated: 34.93 GB
+  0%|          | 0/36 [00:00<?, ?it/s] 44%|████▍     | 16/36 [00:04<00:05,  3.86it/s] 97%|█████████▋| 35/36 [00:08<00:00,  4.26it/s]100%|██████████| 36/36 [00:08<00:00,  4.21it/s]
+Total Validation Classification Accuracy: 0.2191
+Validation Summary - Loss: 2.3702,Segmentation Accuracy: 77.7525, Mean F1 Score: 2.9161, Mean IoU: 2.5917, Mean IoU Without Background: 0.0000, Memory Usage: Allocated: 5.64 GB, Max Allocated: 34.93 GB
+Class                                          IoU       Segmentation Acc    Fscore    Classification Acc  
++---------------------------------------------------------------------------------------------------------------+
+background                                     0.7775    0.7775              0.8748    0.0000              
+maple tar spot                                 0.0000    0.9981              0.0000    0.0000              
+grape downy mildew                             0.0000    0.9784              0.0000    0.7593              
+plum pocket disease                            0.0000    0.9989              0.0000    0.0000              
+tomato yellow leaf curl virus                  0.0000    0.9937              0.0000    0.0000              
+apple black rot                                0.0000    0.9954              0.0000    0.0000              
+blueberry rust                                 0.0000    0.9928              0.0000    0.0000              
+corn gray leaf spot                            0.0000    0.9871              0.0000    0.0000              
+cabbage alternaria leaf spot                   0.0000    0.9933              0.0000    0.0000              
+celery anthracnose                             0.0000    0.9993              0.0000    0.0000              
+cucumber angular leaf spot                     0.0000    0.9782              0.0000    0.7273              
+peach leaf curl                                0.0000    0.9912              0.0000    0.0000              
+citrus canker                                  0.0000    0.9893              0.0000    0.9853              
+rice blast                                     0.0000    0.9967              0.0000    0.0000              
+bean halo blight                               0.0000    0.9966              0.0000    0.0000              
+tomato late blight                             0.0000    0.9887              0.0000    0.0000              
+strawberry anthracnose                         0.0000    0.9978              0.0000    0.0000              
+corn smut                                      0.0000    0.9812              0.0000    0.2250              
+grapevine leafroll disease                     0.0000    0.9896              0.0000    0.0000              
+garlic leaf blight                             0.0000    0.9961              0.0000    0.0000              
+tobacco mosaic virus                           0.0000    0.9863              0.0000    0.0000              
+grape black rot                                0.0000    0.9956              0.0000    0.0000              
+bell pepper leaf spot                          0.0000    0.9950              0.0000    0.0000              
+basil downy mildew                             0.0000    0.9965              0.0000    0.0000              
+ginger leaf spot                               0.0000    0.9998              0.0000    0.0000              
+coffee leaf rust                               0.0000    0.9898              0.0000    0.0000              
+cucumber powdery mildew                        0.0000    0.9861              0.0000    0.0417              
+cauliflower alternaria leaf spot               0.0000    0.9931              0.0000    0.0000              
+carrot cavity spot                             0.0000    0.9976              0.0000    0.0000              
+potato late blight                             0.0000    0.9952              0.0000    0.0000              
+
+Saved new best model at epoch 2 with Mean IoU: 2.591750
+Learning rate: 0.000995476248500442
+Epoch 3/200
+----------
+  0%|          | 0/208 [00:00<?, ?it/s]  3%|▎         | 7/208 [00:05<02:38,  1.27it/s]  7%|▋         | 15/208 [00:10<02:14,  1.43it/s] 11%|█         | 23/208 [00:15<02:04,  1.49it/s] 15%|█▍        | 31/208 [00:20<01:57,  1.51it/s] 19%|█▉        | 39/208 [00:26<01:50,  1.53it/s] 23%|██▎       | 47/208 [00:31<01:44,  1.53it/s] 26%|██▋       | 55/208 [00:36<01:39,  1.54it/s] 30%|███       | 63/208 [00:41<01:34,  1.54it/s] 34%|███▍      | 71/208 [00:46<01:28,  1.54it/s] 38%|███▊      | 79/208 [00:51<01:23,  1.54it/s] 42%|████▏     | 87/208 [00:57<01:18,  1.55it/s] 46%|████▌     | 95/208 [01:02<01:13,  1.55it/s] 50%|████▉     | 103/208 [01:07<01:07,  1.55it/s] 53%|█████▎    | 111/208 [01:12<01:02,  1.55it/s] 57%|█████▋    | 119/208 [01:17<00:57,  1.54it/s] 61%|██████    | 127/208 [01:23<00:52,  1.54it/s] 65%|██████▍   | 135/208 [01:28<00:47,  1.54it/s] 69%|██████▉   | 143/208 [01:33<00:42,  1.54it/s] 73%|███████▎  | 151/208 [01:38<00:36,  1.54it/s] 76%|███████▋  | 159/208 [01:43<00:31,  1.54it/s] 80%|████████  | 167/208 [01:48<00:26,  1.54it/s] 84%|████████▍ | 175/208 [01:54<00:21,  1.54it/s] 88%|████████▊ | 183/208 [01:59<00:16,  1.54it/s] 92%|█████████▏| 191/208 [02:04<00:11,  1.54it/s] 96%|█████████▌| 199/208 [02:09<00:05,  1.54it/s]100%|█████████▉| 207/208 [02:14<00:00,  1.54it/s]100%|██████████| 208/208 [02:15<00:00,  1.53it/s]
+Train Loss: 2.365766 Acc: 77.110305, Memory allocated: 1.35 GB, Max memory allocated: 34.93 GB
+  0%|          | 0/36 [00:00<?, ?it/s] 36%|███▌      | 13/36 [00:04<00:07,  3.19it/s] 94%|█████████▍| 34/36 [00:08<00:00,  4.37it/s]100%|██████████| 36/36 [00:08<00:00,  4.23it/s]
+Total Validation Classification Accuracy: 0.3179
+Validation Summary - Loss: 2.1175,Segmentation Accuracy: 78.5156, Mean F1 Score: 5.1916, Mean IoU: 4.0040, Mean IoU Without Background: 1.4350, Memory Usage: Allocated: 5.64 GB, Max Allocated: 34.93 GB
+Class                                          IoU       Segmentation Acc    Fscore    Classification Acc  
++---------------------------------------------------------------------------------------------------------------+
+background                                     0.7850    0.7873              0.8796    0.0000              
+maple tar spot                                 0.0000    0.9986              0.0000    0.0000              
+grape downy mildew                             0.0000    0.9764              0.0000    0.7407              
+plum pocket disease                            0.0000    0.9990              0.0000    0.0000              
+tomato yellow leaf curl virus                  0.0000    0.9938              0.0000    0.0000              
+apple black rot                                0.0000    0.9955              0.0000    0.0000              
+blueberry rust                                 0.0000    0.9929              0.0000    0.0000              
+corn gray leaf spot                            0.0060    0.9878              0.0120    0.7333              
+cabbage alternaria leaf spot                   0.0000    0.9932              0.0000    0.0000              
+celery anthracnose                             0.0000    0.9993              0.0000    0.0000              
+cucumber angular leaf spot                     0.2852    0.9839              0.4438    0.7879              
+peach leaf curl                                0.0000    0.9911              0.0000    0.0000              
+citrus canker                                  0.0000    0.9894              0.0000    0.9853              
+rice blast                                     0.0000    0.9968              0.0000    0.0000              
+bean halo blight                               0.0000    0.9966              0.0000    0.0000              
+tomato late blight                             0.0000    0.9883              0.0000    0.0488              
+strawberry anthracnose                         0.0000    0.9981              0.0000    0.0000              
+corn smut                                      0.0000    0.9825              0.0000    0.9250              
+grapevine leafroll disease                     0.0000    0.9891              0.0000    0.0000              
+garlic leaf blight                             0.0000    0.9961              0.0000    0.0000              
+tobacco mosaic virus                           0.0000    0.9863              0.0000    0.0000              
+grape black rot                                0.0000    0.9954              0.0000    0.0000              
+bell pepper leaf spot                          0.0000    0.9944              0.0000    0.0000              
+basil downy mildew                             0.0000    0.9970              0.0000    0.0000              
+ginger leaf spot                               0.0000    0.9998              0.0000    0.0000              
+coffee leaf rust                               0.0000    0.9891              0.0000    0.0000              
+cucumber powdery mildew                        0.1249    0.9869              0.2221    0.5000              
+cauliflower alternaria leaf spot               0.0000    0.9928              0.0000    0.0000              
+carrot cavity spot                             0.0000    0.9974              0.0000    0.0000              
+potato late blight                             0.0000    0.9955              0.0000    0.0000              
+
+Saved new best model at epoch 3 with Mean IoU: 4.003993
+Learning rate: 0.0009909502116906528
+Epoch 4/200
+----------
+  0%|          | 0/208 [00:00<?, ?it/s]  3%|▎         | 7/208 [00:05<02:34,  1.30it/s]  7%|▋         | 15/208 [00:10<02:13,  1.45it/s] 11%|█         | 23/208 [00:15<02:03,  1.49it/s] 15%|█▍        | 31/208 [00:20<01:56,  1.52it/s] 19%|█▉        | 39/208 [00:26<01:50,  1.53it/s] 23%|██▎       | 47/208 [00:31<01:44,  1.54it/s] 26%|██▋       | 55/208 [00:36<01:39,  1.54it/s] 30%|███       | 63/208 [00:41<01:33,  1.54it/s] 34%|███▍      | 71/208 [00:46<01:28,  1.54it/s] 38%|███▊      | 79/208 [00:51<01:23,  1.54it/s] 42%|████▏     | 87/208 [00:57<01:18,  1.55it/s] 46%|████▌     | 95/208 [01:02<01:13,  1.55it/s] 50%|████▉     | 103/208 [01:07<01:07,  1.54it/s] 53%|█████▎    | 111/208 [01:12<01:02,  1.54it/s] 57%|█████▋    | 119/208 [01:17<00:57,  1.54it/s] 61%|██████    | 127/208 [01:22<00:52,  1.54it/s] 65%|██████▍   | 135/208 [01:28<00:47,  1.54it/s] 69%|██████▉   | 143/208 [01:33<00:42,  1.54it/s] 73%|███████▎  | 151/208 [01:38<00:36,  1.54it/s] 76%|███████▋  | 159/208 [01:43<00:31,  1.54it/s] 80%|████████  | 167/208 [01:48<00:26,  1.54it/s] 84%|████████▍ | 175/208 [01:54<00:21,  1.54it/s] 88%|████████▊ | 183/208 [01:59<00:16,  1.54it/s] 92%|█████████▏| 191/208 [02:04<00:11,  1.54it/s] 96%|█████████▌| 199/208 [02:09<00:05,  1.54it/s]100%|█████████▉| 207/208 [02:14<00:00,  1.54it/s]100%|██████████| 208/208 [02:15<00:00,  1.54it/s]
+Train Loss: 2.110238 Acc: 78.136221, Memory allocated: 1.35 GB, Max memory allocated: 34.93 GB
+  0%|          | 0/36 [00:00<?, ?it/s] 39%|███▉      | 14/36 [00:04<00:06,  3.39it/s]100%|██████████| 36/36 [00:08<00:00,  4.49it/s]100%|██████████| 36/36 [00:08<00:00,  4.31it/s]
+Total Validation Classification Accuracy: 0.4151
+Validation Summary - Loss: 1.8367,Segmentation Accuracy: 80.7613, Mean F1 Score: 11.4151, Mean IoU: 8.8703, Mean IoU Without Background: 6.3900, Memory Usage: Allocated: 5.64 GB, Max Allocated: 34.93 GB
+Class                                          IoU       Segmentation Acc    Fscore    Classification Acc  
++---------------------------------------------------------------------------------------------------------------+
+background                                     0.8080    0.8179              0.8938    0.0000              
+maple tar spot                                 0.0000    0.9981              0.0000    0.0000              
+grape downy mildew                             0.0119    0.9792              0.0235    0.7963              
+plum pocket disease                            0.0000    0.9990              0.0000    0.0000              
+tomato yellow leaf curl virus                  0.0000    0.9934              0.0000    0.6818              
+apple black rot                                0.0000    0.9960              0.0000    0.1000              
+blueberry rust                                 0.0000    0.9933              0.0000    0.0000              
+corn gray leaf spot                            0.4300    0.9920              0.6014    0.9000              
+cabbage alternaria leaf spot                   0.0000    0.9929              0.0000    0.0000              
+celery anthracnose                             0.0000    0.9994              0.0000    0.0000              
+cucumber angular leaf spot                     0.5699    0.9871              0.7260    0.8788              
+peach leaf curl                                0.0000    0.9905              0.0000    0.3704              
+citrus canker                                  0.0000    0.9891              0.0000    0.9706              
+rice blast                                     0.0000    0.9968              0.0000    0.0000              
+bean halo blight                               0.0000    0.9959              0.0000    0.0000              
+tomato late blight                             0.0000    0.9896              0.0000    0.2439              
+strawberry anthracnose                         0.0000    0.9976              0.0000    0.0000              
+corn smut                                      0.4778    0.9884              0.6466    0.9000              
+grapevine leafroll disease                     0.0000    0.9897              0.0000    0.0000              
+garlic leaf blight                             0.0000    0.9960              0.0000    0.0000              
+tobacco mosaic virus                           0.0000    0.9860              0.0000    0.0000              
+grape black rot                                0.0000    0.9951              0.0000    0.3043              
+bell pepper leaf spot                          0.0000    0.9940              0.0000    0.0000              
+basil downy mildew                             0.0000    0.9969              0.0000    0.0000              
+ginger leaf spot                               0.0000    0.9998              0.0000    0.0000              
+coffee leaf rust                               0.0000    0.9888              0.0000    0.0690              
+cucumber powdery mildew                        0.3636    0.9870              0.5333    0.6667              
+cauliflower alternaria leaf spot               0.0000    0.9926              0.0000    0.0000              
+carrot cavity spot                             0.0000    0.9975              0.0000    0.0000              
+potato late blight                             0.0000    0.9955              0.0000    0.2500              
+
+Saved new best model at epoch 4 with Mean IoU: 8.870288
+Learning rate: 0.000986421876806669
+Epoch 5/200
+----------
+slurmstepd: error: *** JOB 132720 ON a100-1 CANCELLED AT 2024-05-08T02:19:03 ***
+  0%|          | 0/208 [00:00<?, ?it/s]  3%|▎         | 7/208 [00:05<02:40,  1.25it/s]  7%|▋         | 15/208 [00:10<02:15,  1.42it/s] 11%|█         | 23/208 [00:15<02:04,  1.48it/s] 15%|█▍        | 31/208 [00:21<01:57,  1.51it/s] 19%|█▉        | 39/208 [00:26<01:50,  1.52it/s] 23%|██▎       | 47/208 [00:31<01:45,  1.53it/s]slurmstepd: error: *** STEP 132720.0 ON a100-1 CANCELLED AT 2024-05-08T02:19:03 ***
