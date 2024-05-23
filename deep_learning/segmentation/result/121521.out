@@ -1,0 +1,25 @@
+running with Ivan deep learning work
+SLURM job ID: 121521
+dataset: ../../data/project2024/
+Traceback (most recent call last):
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 140, in <module>
+    model = create_fcn_resnet50_model(aux=aux , num_classes= num_classes, pretrained = pretrained)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/fcn.py", line 96, in create_fcn_resnet50_model
+    model = fcn_resnet50(aux=aux, num_classes=num_classes, pretrained = pretrained)                          # 创建模型
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/fcn.py", line 71, in fcn_resnet50
+    backbone = ResNet_50(task_name="cls", pretrained = pretrained, replace_stride_with_dilation=[False, True, True])# 调用带有膨胀卷积的ResNet50,这里使用1000个类去加载预训练的文件
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/classify/resnet.py", line 228, in ResNet_50
+    model = ResNet(block=Bottleneck, layers=[3, 4, 6, 3], num_classes=num_classes, replace_stride_with_dilation=replace_stride_with_dilation)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/classify/resnet.py", line 144, in __init__
+    self.layer1 = self._make_layer(block, 64, blocks=layers[0])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/classify/resnet.py", line 173, in _make_layer
+    layers.append(block(self.inplanes, planes, stride, downsample, self.groups,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Bottleneck.__init__() takes from 3 to 8 positional arguments but 9 were given
+srun: error: c4130-2: task 0: Exited with exit code 1
+任务失败或异常结束

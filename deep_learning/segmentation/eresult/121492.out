@@ -1,39 +1,0 @@
-running with Ivan deep learning work
-SLURM job ID: 121492
-dataset: ../../data/project2024/
-预训练模型已经存在，无需下载。
-预训练模型已经存在，无需下载。
-missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
-unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
-Task name: fcn  num_workers: 4  number of classes: 6
-Using device: cuda
-Using version: 2.2.1
-
-Device name: Tesla P100-PCIE-16GB
-Total memory: 15.8992919921875 GB
-Allocated memory: 0.0 GB
-Cached memory: 0.0 GB
-optimizer name: sgd
-loss name:  ce
-Epoch 1/50
-----------
-  0%|          | 0/91 [00:00<?, ?it/s]  3%|▎         | 3/91 [00:05<02:34,  1.76s/it] 10%|▉         | 9/91 [00:10<01:33,  1.14s/it] 16%|█▋        | 15/91 [00:16<01:18,  1.03s/it] 23%|██▎       | 21/91 [00:21<01:09,  1.01it/s] 30%|██▉       | 27/91 [00:27<01:01,  1.04it/s] 36%|███▋      | 33/91 [00:33<00:55,  1.05it/s] 43%|████▎     | 39/91 [00:38<00:49,  1.06it/s] 49%|████▉     | 45/91 [00:44<00:43,  1.07it/s] 56%|█████▌    | 51/91 [00:49<00:37,  1.07it/s] 63%|██████▎   | 57/91 [00:55<00:31,  1.07it/s] 69%|██████▉   | 63/91 [01:00<00:26,  1.07it/s] 76%|███████▌  | 69/91 [01:06<00:20,  1.08it/s] 82%|████████▏ | 75/91 [01:11<00:14,  1.08it/s] 89%|████████▉ | 81/91 [01:17<00:09,  1.08it/s] 96%|█████████▌| 87/91 [01:23<00:03,  1.08it/s]100%|██████████| 91/91 [01:26<00:00,  1.06it/s]
-Train Loss: 1.733532 Acc: 22.244786, Memory allocated: 0.41 GB, Max memory allocated: 8.93 GB
-  0%|          | 0/16 [00:00<?, ?it/s] 81%|████████▏ | 13/16 [00:05<00:01,  2.59it/s]100%|██████████| 16/16 [00:05<00:00,  2.67it/s]
-Val Loss: 1.457602 Acc: 74.797133, Memory allocated: 0.76 GB, Max memory allocated: 8.93 GB
-Iou per Class: [tensor(0.7910), tensor(0.), tensor(0.0164), tensor(0.), tensor(0.0492), tensor(0.)], Mean IoU: 0.142763, Mean IoU Without Background: 0.013124
-Saved new best model at epoch 1 with Mean IoU: 0.142763
-Learning rate: 0.0001
-Epoch 2/50
-----------
-  0%|          | 0/91 [00:00<?, ?it/s]  5%|▌         | 5/91 [00:05<01:36,  1.12s/it] 12%|█▏        | 11/91 [00:11<01:19,  1.00it/s] 19%|█▊        | 17/91 [00:16<01:11,  1.04it/s] 25%|██▌       | 23/91 [00:22<01:04,  1.05it/s] 32%|███▏      | 29/91 [00:27<00:58,  1.06it/s] 38%|███▊      | 35/91 [00:33<00:52,  1.07it/s] 45%|████▌     | 41/91 [00:38<00:46,  1.07it/s] 52%|█████▏    | 47/91 [00:44<00:40,  1.07it/s] 58%|█████▊    | 53/91 [00:50<00:35,  1.08it/s] 65%|██████▍   | 59/91 [00:55<00:29,  1.08it/s] 71%|███████▏  | 65/91 [01:01<00:24,  1.08it/s] 78%|███████▊  | 71/91 [01:06<00:18,  1.08it/s] 85%|████████▍ | 77/91 [01:12<00:12,  1.08it/s] 91%|█████████ | 83/91 [01:17<00:07,  1.08it/s] 98%|█████████▊| 89/91 [01:23<00:01,  1.08it/s]100%|██████████| 91/91 [01:24<00:00,  1.07it/s]
-Train Loss: 1.206700 Acc: 77.175527, Memory allocated: 0.41 GB, Max memory allocated: 8.93 GB
-  0%|          | 0/16 [00:00<?, ?it/s] 81%|████████▏ | 13/16 [00:05<00:01,  2.51it/s]100%|██████████| 16/16 [00:06<00:00,  2.60it/s]
-Val Loss: 1.031160 Acc: 77.938542, Memory allocated: 0.76 GB, Max memory allocated: 8.93 GB
-Iou per Class: [tensor(0.7851), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.130851, Mean IoU Without Background: 0.000000
-Learning rate: 9.816137691008487e-05
-Epoch 3/50
-----------
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** JOB 121492 ON c4130-2 CANCELLED AT 2024-04-27T23:41:23 ***
-  0%|          | 0/91 [00:00<?, ?it/s]  5%|▌         | 5/91 [00:05<01:38,  1.15s/it] 12%|█▏        | 11/91 [00:11<01:20,  1.01s/it]slurmstepd: error: *** STEP 121492.0 ON c4130-2 CANCELLED AT 2024-04-27T23:41:23 ***

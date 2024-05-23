@@ -1,0 +1,81 @@
+running with Ivan deep learning work
+SLURM job ID: 121054
+dataset: ../../data/project2024/
+预训练模型已经存在，无需下载。
+预训练模型已经存在，无需下载。
+missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
+unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
+Task name: fcn  num_workers: 4  number of classes: 6
+Using device: cuda
+Using version: 2.2.1
+
+Device name: Tesla P100-PCIE-16GB
+Total memory: 15.8992919921875 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+optimizer name: sgd
+loss name:  ce
+Epoch 1/1
+----------
+  0%|          | 0/91 [00:00<?, ?it/s]  4%|▍         | 4/91 [00:05<02:08,  1.48s/it] 11%|█         | 10/91 [00:11<01:29,  1.11s/it] 18%|█▊        | 16/91 [00:17<01:16,  1.02s/it] 24%|██▍       | 22/91 [00:22<01:07,  1.02it/s] 31%|███       | 28/91 [00:28<01:00,  1.04it/s] 37%|███▋      | 34/91 [00:33<00:54,  1.05it/s] 44%|████▍     | 40/91 [00:39<00:48,  1.06it/s] 51%|█████     | 46/91 [00:45<00:42,  1.06it/s] 57%|█████▋    | 52/91 [00:50<00:36,  1.07it/s] 64%|██████▎   | 58/91 [00:56<00:30,  1.07it/s] 70%|███████   | 64/91 [01:01<00:25,  1.07it/s] 77%|███████▋  | 70/91 [01:07<00:19,  1.07it/s] 84%|████████▎ | 76/91 [01:12<00:13,  1.07it/s] 90%|█████████ | 82/91 [01:18<00:08,  1.07it/s] 97%|█████████▋| 88/91 [01:24<00:02,  1.07it/s]100%|██████████| 91/91 [01:26<00:00,  1.05it/s]
+train Loss: 1.411722 Acc: 63.598469, Memory allocated: 0.41 GB, Max memory allocated: 8.93 GB
+train_color_map: dict_keys([0, 1, 2, 4, 3, 5])
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:21,  1.46s/it]
+Traceback (most recent call last):
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 381, in <module>
+    train_model(model, device, 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 222, in train_model
+    outputs = model(now_image)
+              ^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/fcn.py", line 36, in forward
+    features = self.backbone(x)                                                             # feature为字典
+               ^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/dp_support.py", line 229, in forward
+    x = module(x)                                                                   # 每个子模块进行正向传播
+        ^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/classify/resnet.py", line 98, in forward
+    out = self.conv3(out)
+          ^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/anaconda3/envs/venv/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 15.90 GiB of which 23.75 MiB is free. Including non-PyTorch memory, this process has 15.87 GiB memory in use. Of the allocated memory 14.95 GiB is allocated by PyTorch, and 20.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: c4130-2: task 0: Exited with exit code 1
+任务失败或异常结束

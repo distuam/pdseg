@@ -1,45 +1,0 @@
-running with Ivan deep learning work
-SLURM job ID: 122221
-dataset: ../../data/project2024/
-预训练模型已经存在，无需下载。
-预训练模型已经存在，无需下载。
-missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
-unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
-Task name: fcn  num_workers: 4  number of classes: 6 , train set ratio: 0.95
-Using device: cuda
-Using version: 2.2.1
-
-Device name: Tesla P100-PCIE-16GB
-Total memory: 15.8992919921875 GB
-Allocated memory: 0.0 GB
-Cached memory: 0.0 GB
-optimizer name: sgd
-loss name:  ce
-Epoch 1/200
-----------
-  0%|          | 0/67 [00:00<?, ?it/s]  3%|▎         | 2/67 [00:05<02:51,  2.64s/it]  9%|▉         | 6/67 [00:10<01:43,  1.70s/it] 15%|█▍        | 10/67 [00:16<01:26,  1.53s/it] 21%|██        | 14/67 [00:21<01:17,  1.46s/it] 27%|██▋       | 18/67 [00:27<01:09,  1.42s/it] 33%|███▎      | 22/67 [00:32<01:03,  1.40s/it] 39%|███▉      | 26/67 [00:38<00:57,  1.39s/it] 45%|████▍     | 30/67 [00:43<00:51,  1.38s/it] 51%|█████     | 34/67 [00:49<00:45,  1.38s/it] 57%|█████▋    | 38/67 [00:54<00:39,  1.38s/it] 63%|██████▎   | 42/67 [00:59<00:34,  1.37s/it] 69%|██████▊   | 46/67 [01:05<00:28,  1.37s/it] 75%|███████▍  | 50/67 [01:10<00:23,  1.37s/it] 81%|████████  | 54/67 [01:16<00:17,  1.37s/it] 87%|████████▋ | 58/67 [01:21<00:12,  1.37s/it] 93%|█████████▎| 62/67 [01:27<00:06,  1.37s/it] 99%|█████████▊| 66/67 [01:32<00:01,  1.37s/it]100%|██████████| 67/67 [01:33<00:00,  1.39s/it]
-Train Loss: 1.643091 Acc: 49.484287, Memory allocated: 0.42 GB, Max memory allocated: 13.17 GB
-  0%|          | 0/4 [00:00<?, ?it/s]100%|██████████| 4/4 [00:02<00:00,  1.72it/s]
-tensor(8391658) tensor(10824619) tensor(8853236) tensor(10363041)
-tensor(0) tensor(361995) tensor(293484) tensor(68511)
-tensor(8236) tensor(1221108) tensor(1052923) tensor(176421)
-tensor(0) tensor(35468) tensor(10171) tensor(25297)
-tensor(8051) tensor(519512) tensor(417478) tensor(110085)
-tensor(3563) tensor(645886) tensor(382756) tensor(266693)
-Val Loss: 1.438314 Acc: 76.398468, Memory allocated: 0.70 GB, Max memory allocated: 13.17 GB
-Iou per Class: [tensor(0.7752), tensor(0.), tensor(0.0067), tensor(0.), tensor(0.0155), tensor(0.0055)], Mean IoU: 0.133833, Mean IoU Without Background: 0.005552
-0
-['apple_black_rot_google_0005.jpg', 'grape_downy_mildew_google_0265.jpg', 'apple_black_rot_187.jpg', 'apple_black_rot_google_0041.jpg', 'grape_downy_mildew_google_0200.jpg', 'apple_black_rot_32.jpg', 'maple_tar_spot_google_0148.jpg', 'grape_downy_mildew_google_0242.jpg', 'tomato_yellow_leaf_curl_virus_google_0034_-_Copy_(3).jpg', 'grape_downy_mildew_21.jpg', 'grape_downy_mildew_208.jpg', 'grape_downy_mildew_138.jpg']
-1
-['apple_black_rot_7.jpg', 'apple_black_rot_5.jpg', 'tomato_yellow_leaf_curl_virus_43_-_Copy.jpg', 'apple_black_rot_google_0186.jpg', 'grape_downy_mildew_190.jpg', 'tomato_yellow_leaf_curl_virus_64.jpg', 'maple_tar_spot_google_0042.jpg', 'tomato_yellow_leaf_curl_virus_google_0024.jpg', 'plum_pocket_disease_google_0031.jpg', 'grape_downy_mildew_225.jpg', 'grape_downy_mildew_243.jpg', 'maple_tar_spot_google_0054.jpg']
-2
-['maple_tar_spot_google_0038.jpg', 'maple_tar_spot_google_0168.jpg', 'grape_downy_mildew_google_0153.jpg', 'tomato_yellow_leaf_curl_virus_google_0005.jpg', 'maple_tar_spot_google_0197.jpg', 'tomato_yellow_leaf_curl_virus_43_-_Copy_(2).jpg', 'apple_black_rot_google_0090.jpg', 'apple_black_rot_google_0135.jpg', 'maple_tar_spot_google_0088.jpg', 'apple_black_rot_google_0048.jpg', 'grape_downy_mildew_234.jpg', 'grape_downy_mildew_google_0117.jpg']
-3
-['grape_downy_mildew_178.jpg', 'grape_downy_mildew_4.jpg', 'apple_black_rot_175.jpg', 'maple_tar_spot_google_0082.jpg', 'maple_tar_spot_google_0232.jpg', 'tomato_yellow_leaf_curl_virus_google_0114.jpg']
-Saved new best model at epoch 1 with Mean IoU: 0.133833
-Learning rate: 0.0001
-Epoch 2/200
-----------
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** JOB 122221 ON c4130-2 CANCELLED AT 2024-04-29T23:53:18 ***
-  0%|          | 0/67 [00:00<?, ?it/s]  6%|▌         | 4/67 [00:06<01:40,  1.59s/it] 12%|█▏        | 8/67 [00:11<01:26,  1.46s/it] 18%|█▊        | 12/67 [00:17<01:17,  1.42s/it] 24%|██▍       | 16/67 [00:22<01:11,  1.40s/it] 30%|██▉       | 20/67 [00:28<01:05,  1.39s/it] 36%|███▌      | 24/67 [00:33<00:59,  1.38s/it]slurmstepd: error: *** STEP 122221.0 ON c4130-2 CANCELLED AT 2024-04-29T23:53:18 ***

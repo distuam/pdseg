@@ -1,18 +1,0 @@
-running with Ivan deep learning work
-SLURM job ID: 120963
-dataset: ../../data/project2024/
-预训练模型已经存在，无需下载。
-Task name: unet  num_workers: 4
-Using device: cuda
-Using version: 2.2.1
-
-Device name: Tesla P100-PCIE-16GB
-Total memory: 15.8992919921875 GB
-Allocated memory: 0.0 GB
-Cached memory: 0.0 GB
-optimizer name: sgd
-loss name:  ce
-Epoch 1/30
-----------
-  0%|          | 0/102 [00:00<?, ?it/s]  1%|          | 1/102 [00:23<38:44, 23.01s/it]  5%|▍         | 5/102 [00:35<09:50,  6.09s/it]  5%|▍         | 5/102 [00:50<09:50,  6.09s/it]  9%|▉         | 9/102 [00:57<08:53,  5.74s/it] 13%|█▎        | 13/102 [01:03<05:45,  3.88s/it] 13%|█▎        | 13/102 [01:20<05:45,  3.88s/it] 17%|█▋        | 17/102 [01:20<05:43,  4.04s/it] 20%|█▉        | 20/102 [01:27<04:49,  3.53s/it] 23%|██▎       | 23/102 [01:33<04:03,  3.09s/it] 25%|██▌       | 26/102 [01:41<03:47,  3.00s/it] 28%|██▊       | 29/102 [01:56<04:22,  3.59s/it] 32%|███▏      | 33/102 [02:08<03:48,  3.32s/it] 32%|███▏      | 33/102 [02:20<03:48,  3.32s/it] 36%|███▋      | 37/102 [02:32<04:34,  4.22s/it] 40%|████      | 41/102 [02:45<03:59,  3.93s/it] 40%|████      | 41/102 [03:00<03:59,  3.93s/it] 44%|████▍     | 45/102 [03:00<03:39,  3.85s/it] 48%|████▊     | 49/102 [03:05<02:41,  3.04s/it] 48%|srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** JOB 120963 ON c4130-2 CANCELLED AT 2024-04-24T02:51:11 ***

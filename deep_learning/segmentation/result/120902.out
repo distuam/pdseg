@@ -1,0 +1,29 @@
+running with Ivan deep learning work
+SLURM job ID: 120902
+dataset: ../../data/project2024/
+预训练模型已经存在，无需下载。
+预训练模型已经存在，无需下载。
+missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
+unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
+Task name: deeplab  num_workers: 4
+Using device: cuda
+Using version: 2.2.1
+
+Device name: Tesla P100-PCIE-16GB
+Total memory: 15.8992919921875 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+optimizer name: sgd
+Traceback (most recent call last):
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 435, in <module>
+    train_model(model, device, 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 176, in train_model
+    criterion = FocalLoss(gamma=0.5)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/loss.py", line 28, in __init__
+    super(Focal_loss, self).__init__()
+          ^^^^^^^^^^
+NameError: name 'Focal_loss' is not defined. Did you mean: 'FocalLoss'?
+srun: error: c4130-2: task 0: Exited with exit code 1
+任务失败或异常结束

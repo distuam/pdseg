@@ -1,0 +1,26 @@
+running with Ivan deep learning work
+num_workers: 4
+Using device: cuda
+Using version: 2.2.1
+
+Tesla P100-PCIE-16GB
+Total memory: 15.8992919921875 GB
+Allocated: 0.0 GB
+Cached:    0.0 GB
+Task name: deeplab
+Epoch 1/400
+----------
+  0%|          | 0/23 [00:00<?, ?it/s]  0%|          | 0/23 [00:17<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 407, in <module>
+    train_model(model, device, 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 219, in train_model
+    loss = cross_entropy2d(outputs, labels, size_average = True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/loss.py", line 7, in cross_entropy2d
+    n, c, h, w = predict.size()
+                 ^^^^^^^^^^^^
+AttributeError: 'collections.OrderedDict' object has no attribute 'size'
+srun: error: c4130-2: task 0: Exited with exit code 1
+任务失败或异常结束

@@ -1,0 +1,18 @@
+running with Ivan deep learning work
+SLURM job ID: 120694
+dataset: ../../data/project2024/
+预训练模型已经存在，无需下载。
+Task name: unet  num_workers: 4
+Using device: cuda
+Using version: 2.2.1
+
+Device name: Tesla P100-PCIE-16GB
+Total memory: 15.8992919921875 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+optimizer name: sgd
+Epoch 1/30
+----------
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 120694 ON c4130-2 CANCELLED AT 2024-04-22T10:40:48 ***
+  0%|          | 0/184 [00:00<?, ?it/s]slurmstepd: error: *** STEP 120694.0 ON c4130-2 CANCELLED AT 2024-04-22T10:40:48 ***

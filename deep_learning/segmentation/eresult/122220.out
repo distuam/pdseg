@@ -1,54 +1,0 @@
-running with Ivan deep learning work
-SLURM job ID: 122220
-dataset: ../../data/project2024/
-预训练模型已经存在，无需下载。
-预训练模型已经存在，无需下载。
-missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
-unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
-Task name: fcn  num_workers: 4  number of classes: 6 , train set ratio: 0.95
-Using device: cuda
-Using version: 2.2.1
-
-Device name: Tesla P100-PCIE-16GB
-Total memory: 15.8992919921875 GB
-Allocated memory: 0.0 GB
-Cached memory: 0.0 GB
-optimizer name: sgd
-loss name:  ce
-Epoch 1/200
-----------
-  0%|          | 0/67 [00:00<?, ?it/s]  3%|▎         | 2/67 [00:05<02:51,  2.65s/it]  9%|▉         | 6/67 [00:10<01:43,  1.70s/it] 15%|█▍        | 10/67 [00:16<01:27,  1.53s/it] 21%|██        | 14/67 [00:21<01:17,  1.46s/it] 27%|██▋       | 18/67 [00:27<01:09,  1.42s/it] 33%|███▎      | 22/67 [00:32<01:03,  1.40s/it] 39%|███▉      | 26/67 [00:38<00:57,  1.39s/it] 45%|████▍     | 30/67 [00:43<00:51,  1.38s/it] 51%|█████     | 34/67 [00:49<00:45,  1.38s/it] 57%|█████▋    | 38/67 [00:54<00:39,  1.37s/it] 63%|██████▎   | 42/67 [00:59<00:34,  1.37s/it] 69%|██████▊   | 46/67 [01:05<00:28,  1.37s/it] 75%|███████▍  | 50/67 [01:10<00:23,  1.37s/it] 81%|████████  | 54/67 [01:16<00:17,  1.37s/it] 87%|████████▋ | 58/67 [01:21<00:12,  1.37s/it] 93%|█████████▎| 62/67 [01:27<00:06,  1.37s/it] 99%|█████████▊| 66/67 [01:32<00:01,  1.37s/it]100%|██████████| 67/67 [01:33<00:00,  1.39s/it]
-Train Loss: 1.789169 Acc: 19.313047, Memory allocated: 0.42 GB, Max memory allocated: 13.17 GB
-  0%|          | 0/4 [00:00<?, ?it/s]100%|██████████| 4/4 [00:02<00:00,  1.78it/s]
-tensor(8171890) tensor(10830550) tensor(8796489) tensor(10205951)
-tensor(17433) tensor(769212) tensor(286925) tensor(499720)
-tensor(1602) tensor(1190808) tensor(1133278) tensor(59132)
-tensor(1) tensor(106570) tensor(35604) tensor(70967)
-tensor(5233) tensor(481964) tensor(367920) tensor(119277)
-tensor(439) tensor(444394) tensor(389832) tensor(55001)
-Val Loss: 1.537837 Acc: 74.446524, Memory allocated: 0.70 GB, Max memory allocated: 13.17 GB
-Iou per Class: [tensor(0.7545), tensor(0.0227), tensor(0.0013), tensor(9.3835e-06), tensor(0.0109), tensor(0.0010)], Mean IoU: 0.131731, Mean IoU Without Background: 0.007173
-0
-['apple_black_rot_google_0005.jpg', 'grape_downy_mildew_google_0265.jpg', 'apple_black_rot_187.jpg', 'apple_black_rot_google_0041.jpg', 'grape_downy_mildew_google_0200.jpg', 'apple_black_rot_32.jpg', 'maple_tar_spot_google_0148.jpg', 'grape_downy_mildew_google_0242.jpg', 'tomato_yellow_leaf_curl_virus_google_0034_-_Copy_(3).jpg', 'grape_downy_mildew_21.jpg', 'grape_downy_mildew_208.jpg', 'grape_downy_mildew_138.jpg']
-1
-['apple_black_rot_7.jpg', 'apple_black_rot_5.jpg', 'tomato_yellow_leaf_curl_virus_43_-_Copy.jpg', 'apple_black_rot_google_0186.jpg', 'grape_downy_mildew_190.jpg', 'tomato_yellow_leaf_curl_virus_64.jpg', 'maple_tar_spot_google_0042.jpg', 'tomato_yellow_leaf_curl_virus_google_0024.jpg', 'plum_pocket_disease_google_0031.jpg', 'grape_downy_mildew_225.jpg', 'grape_downy_mildew_243.jpg', 'maple_tar_spot_google_0054.jpg']
-2
-['maple_tar_spot_google_0038.jpg', 'maple_tar_spot_google_0168.jpg', 'grape_downy_mildew_google_0153.jpg', 'tomato_yellow_leaf_curl_virus_google_0005.jpg', 'maple_tar_spot_google_0197.jpg', 'tomato_yellow_leaf_curl_virus_43_-_Copy_(2).jpg', 'apple_black_rot_google_0090.jpg', 'apple_black_rot_google_0135.jpg', 'maple_tar_spot_google_0088.jpg', 'apple_black_rot_google_0048.jpg', 'grape_downy_mildew_234.jpg', 'grape_downy_mildew_google_0117.jpg']
-3
-['grape_downy_mildew_178.jpg', 'grape_downy_mildew_4.jpg', 'apple_black_rot_175.jpg', 'maple_tar_spot_google_0082.jpg', 'maple_tar_spot_google_0232.jpg', 'tomato_yellow_leaf_curl_virus_google_0114.jpg']
-4
-Traceback (most recent call last):
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 124, in <module>
-    train_model(model=model, 
-    ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 255, in train_model
-    find_best, iou, loss = evaluate(device=device, 
-                           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 200, in evaluate
-    save_all_image(max_image, all_images, all_file_name, all_labels, all_preds, epoch, prediction_file_path)
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 98, in save_all_image
-    print(file_names[i])
-          ~~~~~~~~~~^^^
-IndexError: list index out of range
-srun: error: c4130-2: task 0: Exited with exit code 1
-任务失败或异常结束

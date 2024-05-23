@@ -1,0 +1,23 @@
+running with Ivan deep learning work
+SLURM job ID: 132722
+dataset: project2024, number of classes: 30, classification task: True, Binary classification: True
+Backbone_type: resnet50
+预训练模型已经存在，无需下载。
+预训练模型已经存在，无需下载。
+Missing keys:  ['classifier.4.weight', 'classifier.4.bias']
+Unexpected keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
+Task name: fcn, num_workers: 4, batch_size: 6, train set ratio: 0.85
+Using device: cuda
+Using version: 2.2.1
+
+Device name: Tesla P100-PCIE-16GB
+Total memory: 15.8992919921875 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+optimizer name: sgd
+loss name:  ce
+Epoch 1/200
+----------
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 132722 ON c4130-2 CANCELLED AT 2024-05-08T02:13:19 ***
+  0%|          | 0/626 [00:00<?, ?it/s]  1%|          | 5/626 [00:05<11:41,  1.13s/it]  2%|▏         | 13/626 [00:11<08:29,  1.20it/s]  3%|▎         | 21/626 [00:16<07:43,  1.31it/s]  5%|▍         | 29/626 [00:22<07:20,  1.35it/s]slurmstepd: error: *** STEP 132722.0 ON c4130-2 CANCELLED AT 2024-05-08T02:13:19 ***

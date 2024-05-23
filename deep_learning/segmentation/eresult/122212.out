@@ -1,49 +1,0 @@
-running with Ivan deep learning work
-SLURM job ID: 122212
-dataset: ../../data/project2024/
-预训练模型已经存在，无需下载。
-预训练模型已经存在，无需下载。
-missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
-unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
-Task name: fcn  num_workers: 4  number of classes: 12
-Using device: cuda
-Using version: 2.2.1
-
-Device name: Tesla P100-PCIE-16GB
-Total memory: 15.8992919921875 GB
-Allocated memory: 0.0 GB
-Cached memory: 0.0 GB
-optimizer name: sgd
-loss name:  ce
-Epoch 1/200
-----------
-  0%|          | 0/134 [00:00<?, ?it/s]  1%|▏         | 2/134 [00:05<06:10,  2.80s/it]  4%|▍         | 6/134 [00:11<03:43,  1.74s/it]  7%|▋         | 10/134 [00:16<03:12,  1.55s/it] 10%|█         | 14/134 [00:22<02:57,  1.48s/it] 13%|█▎        | 18/134 [00:27<02:47,  1.44s/it] 16%|█▋        | 22/134 [00:33<02:38,  1.42s/it] 19%|█▉        | 26/134 [00:38<02:31,  1.40s/it] 22%|██▏       | 30/134 [00:44<02:25,  1.40s/it] 25%|██▌       | 34/134 [00:49<02:18,  1.39s/it] 28%|██▊       | 38/134 [00:55<02:13,  1.39s/it] 31%|███▏      | 42/134 [01:00<02:07,  1.38s/it] 34%|███▍      | 46/134 [01:06<02:01,  1.38s/it] 37%|███▋      | 50/134 [01:11<01:56,  1.38s/it] 40%|████      | 54/134 [01:17<01:50,  1.38s/it] 43%|████▎     | 58/134 [01:22<01:44,  1.38s/it] 46%|████▋     | 62/134 [01:28<01:39,  1.38s/it] 49%|████▉     | 66/134 [01:33<01:33,  1.38s/it] 52%|█████▏    | 70/134 [01:39<01:28,  1.38s/it] 55%|█████▌    | 74/134 [01:44<01:22,  1.38s/it] 58%|█████▊    | 78/134 [01:50<01:17,  1.38s/it] 61%|██████    | 82/134 [01:55<01:11,  1.38s/it] 64%|██████▍   | 86/134 [02:01<01:06,  1.38s/it] 67%|██████▋   | 90/134 [02:06<01:00,  1.38s/it] 70%|███████   | 94/134 [02:12<00:55,  1.38s/it] 73%|███████▎  | 98/134 [02:17<00:49,  1.38s/it] 76%|███████▌  | 102/134 [02:23<00:44,  1.38s/it] 79%|███████▉  | 106/134 [02:28<00:38,  1.38s/it] 82%|████████▏ | 110/134 [02:34<00:33,  1.38s/it] 85%|████████▌ | 114/134 [02:39<00:27,  1.38s/it] 88%|████████▊ | 118/134 [02:45<00:22,  1.38s/it] 91%|█████████ | 122/134 [02:50<00:16,  1.38s/it] 94%|█████████▍| 126/134 [02:56<00:11,  1.38s/it] 97%|█████████▋| 130/134 [03:01<00:05,  1.38s/it]100%|██████████| 134/134 [03:07<00:00,  1.40s/it]
-Train Loss: 2.205131 Acc: 48.750183, Memory allocated: 0.52 GB, Max memory allocated: 13.24 GB
-  0%|          | 0/8 [00:00<?, ?it/s]100%|██████████| 8/8 [00:03<00:00,  2.01it/s]
-tensor(16680847) tensor(22281639) tensor(16685427) tensor(22277059)
-tensor(0) tensor(148048) tensor(147571) tensor(477)
-tensor(0) tensor(1615546) tensor(1615546) tensor(0)
-tensor(0) tensor(39551) tensor(39551) tensor(0)
-tensor(0) tensor(215479) tensor(215476) tensor(3)
-tensor(0) tensor(270475) tensor(270475) tensor(0)
-tensor(0) tensor(123509) tensor(123509) tensor(0)
-tensor(0) tensor(55872) tensor(55872) tensor(0)
-tensor(0) tensor(631284) tensor(630786) tensor(498)
-tensor(0) tensor(6969) tensor(2766) tensor(4203)
-tensor(0) tensor(1513922) tensor(1513922) tensor(0)
-tensor(0) tensor(981339) tensor(981339) tensor(0)
-Val Loss: 1.802717 Acc: 74.861625, Memory allocated: 0.97 GB, Max memory allocated: 13.24 GB
-Iou per Class: [tensor(0.7486), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.062386, Mean IoU Without Background: 0.000000
-Traceback (most recent call last):
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 124, in <module>
-    train_model(model=model, 
-    ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 254, in train_model
-    find_best, iou, loss = evaluate(device=device, 
-                           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 195, in evaluate
-    if epoch_loss < best_loss:
-       ^^^^^^^^^^
-UnboundLocalError: cannot access local variable 'best_loss' where it is not associated with a value
-srun: error: c4130-2: task 0: Exited with exit code 1
-任务失败或异常结束

@@ -1,24 +1,0 @@
-running with Ivan deep learning work
-SLURM job ID: 119310
-dataset: ../../data/VOCdevkit/VOC2012/
-预训练模型已经存在，无需下载。
-预训练模型已经存在，无需下载。
-missing_keys:  ['classifier.4.weight', 'classifier.4.bias', 'aux_classifier.4.weight', 'aux_classifier.4.bias']
-unexpected_keys:  []
-num_workers: 4
-Using device: cuda
-Using version: 2.2.1
-
-Device name: Tesla P100-PCIE-16GB
-Total memory: 15.8992919921875 GB
-Allocated memory: 0.0 GB
-Cached memory: 0.0 GB
-Task name: fcn
-Epoch 1/300
-----------
-  0%|          | 0/23 [00:00<?, ?it/s]  4%|▍         | 1/23 [00:11<04:20, 11.84s/it] 22%|██▏       | 5/23 [00:20<01:03,  3.51s/it] 39%|███▉      | 9/23 [00:28<00:39,  2.79s/it] 57%|█████▋    | 13/23 [00:39<00:26,  2.69s/it] 74%|███████▍  | 17/23 [00:48<00:15,  2.54s/it] 91%|█████████▏| 21/23 [00:56<00:04,  2.39s/it]100%|██████████| 23/23 [00:58<00:00,  2.54s/it]
-train Loss: 1.9880 Acc: 54.1851, Memory allocated: 0.55 GB, Max memory allocated: 13.22 GB
-train_color_map: dict_keys([0, 38, 147, 220, 52, 34, 57, 113, 53, 15, 133, 151, 109, 72, 94, 75, 128, 19, 90, 76])
-  0%|          | 0/23 [00:00<?, ?it/s]  4%|▍         | 1/23 [00:09<03:25,  9.33s/it] 22%|██▏       | 5/23 [00:17<00:58,  3.22s/it] 39%|███▉      | 9/23 [00:26<00:37,  2.66s/it] 57%|█████▋    | 13/23 [00:36<00:25,  2.53s/it] 74%|███████▍  | 17/23 [00:44<00:14,  2.39s/it] 91%|█████████▏| 21/23 [00:53<00:04,  2.33s/it]100%|██████████| 23/23 [00:54<00:00,  2.37s/it]
-slurmstepd: error: *** JOB 119310 ON c4130-2 CANCELLED AT 2024-04-13T01:20:05 ***
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

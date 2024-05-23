@@ -1,0 +1,18 @@
+running with Ivan deep learning work
+SLURM job ID: 132718
+dataset: project2024, number of classes: 30, classification task: True, Binary classification: False
+Task name: fcn, num_workers: 4, batch_size: 18, train set ratio: 0.85
+Using device: cuda
+Using version: 2.2.1
+
+Device name: NVIDIA A100-PCIE-40GB
+Total memory: 39.39385986328125 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+Traceback (most recent call last):
+  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 129, in <module>
+    model = model.to(device)
+            ^^^^^
+NameError: name 'model' is not defined
+srun: error: a100-7: task 0: Exited with exit code 1
+任务失败或异常结束

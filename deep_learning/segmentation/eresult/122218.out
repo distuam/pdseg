@@ -1,45 +1,0 @@
-running with Ivan deep learning work
-SLURM job ID: 122218
-dataset: ../../data/project2024/
-预训练模型已经存在，无需下载。
-预训练模型已经存在，无需下载。
-missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
-unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
-Task name: fcn  num_workers: 4  number of classes: 6 , train set ratio: 0.95
-Using device: cuda
-Using version: 2.2.1
-
-Device name: Tesla P100-PCIE-16GB
-Total memory: 15.8992919921875 GB
-Allocated memory: 0.0 GB
-Cached memory: 0.0 GB
-optimizer name: sgd
-loss name:  ce
-Epoch 1/200
-----------
-  0%|          | 0/67 [00:00<?, ?it/s]  3%|▎         | 2/67 [00:05<02:58,  2.74s/it]  9%|▉         | 6/67 [00:10<01:45,  1.73s/it] 15%|█▍        | 10/67 [00:16<01:27,  1.54s/it] 21%|██        | 14/67 [00:21<01:17,  1.47s/it] 27%|██▋       | 18/67 [00:27<01:10,  1.43s/it] 33%|███▎      | 22/67 [00:32<01:03,  1.41s/it] 39%|███▉      | 26/67 [00:38<00:57,  1.40s/it] 45%|████▍     | 30/67 [00:43<00:51,  1.39s/it] 51%|█████     | 34/67 [00:49<00:45,  1.39s/it] 57%|█████▋    | 38/67 [00:54<00:40,  1.38s/it] 63%|██████▎   | 42/67 [01:00<00:34,  1.38s/it] 69%|██████▊   | 46/67 [01:05<00:28,  1.38s/it] 75%|███████▍  | 50/67 [01:11<00:23,  1.38s/it] 81%|████████  | 54/67 [01:16<00:17,  1.38s/it] 87%|████████▋ | 58/67 [01:22<00:12,  1.38s/it] 93%|█████████▎| 62/67 [01:27<00:06,  1.38s/it] 99%|█████████▊| 66/67 [01:33<00:01,  1.38s/it]100%|██████████| 67/67 [01:33<00:00,  1.40s/it]
-Train Loss: 1.730662 Acc: 28.986074, Memory allocated: 0.42 GB, Max memory allocated: 13.17 GB
-  0%|          | 0/4 [00:00<?, ?it/s]100%|██████████| 4/4 [00:02<00:00,  1.73it/s]
-tensor(7950942) tensor(10456274) tensor(8962008) tensor(9445208)
-tensor(4779) tensor(587569) tensor(258730) tensor(333618)
-tensor(161513) tensor(1964820) tensor(1045659) tensor(1080674)
-tensor(0) tensor(46130) tensor(35609) tensor(10521)
-tensor(2601) tensor(515756) tensor(396694) tensor(121663)
-tensor(0) tensor(329712) tensor(311348) tensor(18364)
-Val Loss: 1.500609 Acc: 73.749315, Memory allocated: 0.70 GB, Max memory allocated: 13.17 GB
-Iou per Class: [tensor(0.7604), tensor(0.0081), tensor(0.0822), tensor(0.), tensor(0.0050), tensor(0.)], Mean IoU: 0.142630, Mean IoU Without Background: 0.019076
-Traceback (most recent call last):
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/seg.py", line 124, in <module>
-    train_model(model=model, 
-    ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 254, in train_model
-    find_best, iou, loss = evaluate(device=device, 
-                           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 199, in evaluate
-    save_all_image(max_image, all_images, all_file_name, all_labels, all_preds, epoch, prediction_file_path)
-  File "/home/Student/s4715365/testfolder/comp7840/deep_learning/segmentation/../../deep_learning/segmentation/train.py", line 104, in save_all_image
-    ax[0].set_title(f'Original Image: {file_names[i][0]}')
-                                       ~~~~~~~~~~^^^
-IndexError: list index out of range
-srun: error: c4130-2: task 0: Exited with exit code 1
-任务失败或异常结束

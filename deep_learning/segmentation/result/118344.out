@@ -1,0 +1,23 @@
+running with Ivan deep learning work
+num_workers: 4
+Using device: cuda
+Using version: 2.2.1
+
+Device name: Tesla P100-PCIE-16GB
+Total memory: 15.8992919921875 GB
+Allocated memory: 0.0 GB
+Cached memory: 0.0 GB
+Task name: unet
+Epoch 1/1
+----------
+  0%|          | 0/46 [00:00<?, ?it/s]  2%|▏         | 1/46 [00:07<05:27,  7.27s/it] 17%|█▋        | 8/46 [00:12<00:51,  1.36s/it] 28%|██▊       | 13/46 [00:19<00:45,  1.39s/it] 37%|███▋      | 17/46 [00:25<00:39,  1.38s/it] 48%|████▊     | 22/46 [00:30<00:30,  1.28s/it] 59%|█████▊    | 27/46 [00:36<00:23,  1.24s/it] 70%|██████▉   | 32/46 [00:42<00:17,  1.23s/it] 80%|████████  | 37/46 [00:50<00:12,  1.36s/it] 89%|████████▉ | 41/46 [00:56<00:06,  1.35s/it]100%|██████████| 46/46 [01:00<00:00,  1.33s/it]
+train Loss: 1.9063 Acc: 55.4729, Memory allocated: 0.41 GB, Max memory allocated: 10.39 GB
+train_color_map: dict_keys([0, 38, 147, 220, 52, 34, 57, 113, 53, 15, 133, 151, 109, 72, 94, 75, 128, 19, 90, 76])
+Learning Rate: 0.01
+  0%|          | 0/46 [00:00<?, ?it/s]  2%|▏         | 1/46 [00:05<04:08,  5.52s/it] 17%|█▋        | 8/46 [00:10<00:44,  1.18s/it] 28%|██▊       | 13/46 [00:18<00:46,  1.40s/it] 41%|████▏     | 19/46 [00:24<00:31,  1.16s/it] 54%|█████▍    | 25/46 [00:32<00:26,  1.24s/it] 65%|██████▌   | 30/46 [00:37<00:18,  1.16s/it] 78%|███████▊  | 36/46 [00:42<00:10,  1.05s/it] 89%|████████▉ | 41/46 [00:50<00:06,  1.22s/it]100%|██████████| 46/46 [00:54<00:00,  1.19s/it]
+val Loss: 2.2058 Acc: 52.1703, Memory allocated: 1.40 GB, Max memory allocated: 3.93 GB
+val_color_map: dict_keys([0, 38, 147, 220, 52, 34, 57, 113, 53, 15, 133, 151, 109, 72, 94, 75, 128, 19, 90, 76])
+Iou per Class: [tensor(0.5553), tensor(0.), tensor(0.0877), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.0321
+Saved new best model at epoch 1 with Mean IoU: 0.0321
+Best epoch 0, Best Loss 2.2058239072005943
+任务成功结束

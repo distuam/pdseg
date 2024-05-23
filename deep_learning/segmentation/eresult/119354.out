@@ -1,35 +1,0 @@
-running with Ivan deep learning work
-SLURM job ID: 119354
-dataset: ../../data/VOCdevkit/VOC2012/
-预训练模型已经存在，无需下载。
-预训练模型已经存在，无需下载。
-missing_keys:  ['classifier.4.weight', 'classifier.4.bias']
-unexpected_keys:  ['aux_classifier.0.weight', 'aux_classifier.1.weight', 'aux_classifier.1.bias', 'aux_classifier.1.running_mean', 'aux_classifier.1.running_var', 'aux_classifier.1.num_batches_tracked']
-num_workers: 4
-Using device: cuda
-Using version: 2.2.1
-
-Device name: Tesla P100-PCIE-16GB
-Total memory: 15.8992919921875 GB
-Allocated memory: 0.0 GB
-Cached memory: 0.0 GB
-Task name: fcn
-Epoch 1/50
-----------
-  0%|          | 0/31 [00:00<?, ?it/s]  3%|▎         | 1/31 [00:09<04:37,  9.27s/it] 16%|█▌        | 5/31 [00:15<01:08,  2.64s/it] 29%|██▉       | 9/31 [00:22<00:49,  2.24s/it] 42%|████▏     | 13/31 [00:30<00:37,  2.07s/it] 55%|█████▍    | 17/31 [00:37<00:28,  2.02s/it] 68%|██████▊   | 21/31 [00:45<00:19,  1.95s/it] 81%|████████  | 25/31 [00:53<00:11,  1.97s/it] 94%|█████████▎| 29/31 [00:59<00:03,  1.82s/it]100%|██████████| 31/31 [01:01<00:00,  1.97s/it]
-train Loss: 2.0269 Acc: 53.0895, Memory allocated: 0.62 GB, Max memory allocated: 10.47 GB
-train_color_map: dict_keys([0, 38, 147, 220, 52, 34, 57, 113, 53, 15, 133, 151, 109, 72, 94, 75, 128, 19, 90, 76])
-  0%|          | 0/31 [00:00<?, ?it/s]  3%|▎         | 1/31 [00:07<03:32,  7.09s/it] 16%|█▌        | 5/31 [00:13<01:03,  2.43s/it] 29%|██▉       | 9/31 [00:20<00:44,  2.01s/it] 42%|████▏     | 13/31 [00:26<00:32,  1.80s/it] 55%|█████▍    | 17/31 [00:32<00:24,  1.72s/it] 68%|██████▊   | 21/31 [00:39<00:17,  1.71s/it] 81%|████████  | 25/31 [00:45<00:09,  1.63s/it] 94%|█████████▎| 29/31 [00:51<00:03,  1.58s/it]100%|██████████| 31/31 [00:52<00:00,  1.70s/it]
-val Loss: 117.5051 Acc: 56.5031, Memory allocated: 2.43 GB, Max memory allocated: 3.86 GB
-val_color_map: dict_keys([0, 38, 147, 220, 52, 34, 57, 113, 53, 15, 133, 151, 109, 72, 94, 75, 128, 19, 90, 76])
-Iou per Class: [tensor(0.5650), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.)], Mean IoU: 0.0283
-Saved new best model at epoch 1 with Mean IoU: 0.0283
-Learning rate: 0.01
-Epoch 2/50
-----------
-  0%|          | 0/31 [00:00<?, ?it/s]  3%|▎         | 1/31 [00:07<03:52,  7.74s/it] 16%|█▌        | 5/31 [00:15<01:11,  2.77s/it] 29%|██▉       | 9/31 [00:22<00:50,  2.29s/it] 42%|████▏     | 13/31 [00:30<00:37,  2.09s/it] 55%|█████▍    | 17/31 [00:37<00:27,  1.95s/it] 68%|██████▊   | 21/31 [00:44<00:19,  1.92s/it] 81%|████████  | 25/31 [00:52<00:11,  1.90s/it] 94%|█████████▎| 29/31 [00:58<00:03,  1.78s/it]100%|██████████| 31/31 [00:59<00:00,  1.93s/it]
-train Loss: 1.8740 Acc: 56.2150, Memory allocated: 2.52 GB, Max memory allocated: 12.36 GB
-train_color_map: dict_keys([0, 38, 147, 220, 52, 34, 57, 113, 53, 15, 133, 151, 109, 72, 94, 75, 128, 19, 90, 76])
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** JOB 119354 ON c4130-2 CANCELLED AT 2024-04-13T14:45:29 ***
-  0%|          | 0/31 [00:00<?, ?it/s]  3%|▎         | 1/31 [00:07<03:35,  7.18s/it] 16%|█▌        | 5/31 [00:14<01:06,  2.57s/it]slurmstepd: error: *** STEP 119354.0 ON c4130-2 CANCELLED AT 2024-04-13T14:45:29 ***
