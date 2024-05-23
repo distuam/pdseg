@@ -235,7 +235,23 @@ class IntermediateLayerGetter(nn.ModuleDict):
                 out_name = self.return_layers[name]                                         # 把存在return_layers里key对应的value取出来，比如layer3的aux对应的输出和layer4的out对应的输出
                 out[out_name] = x                                                           # 举例：name=layer4-->out_name=out-->layer4的输出
         return out
-    
+
+
+def load_pretrained_weights(model, model_url, num_classes):
+    """
+    Load and modify pretrained weights as needed for different number of classes.
+    """
+    model_path_name = download_pretrained_model(model_url)
+    weights_dict = load_module(model_path_name)
+    if num_classes != 21:
+        for k in list(weights_dict.keys()):
+            if "classifier.4" in k:
+                del weights_dict[k]
+    missing_keys, unexpected_keys = model.load_state_dict(weights_dict, strict=False)
+    if len(missing_keys) != 0 or len(unexpected_keys) != 0:
+        print("Missing keys: ", missing_keys)
+        print("Unexpected keys: ", unexpected_keys)
+
 def format_time(seconds):
     hours, remainder = divmod(seconds, 3600)
     minutes, seconds = divmod(remainder, 60)

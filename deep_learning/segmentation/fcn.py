@@ -9,11 +9,12 @@ from torch import nn, Tensor
 from torch.nn import functional as F
 from deep_learning.hander import segmentation_hander
 from deep_learning.classification.resnet import ResNet_50, ResNet_101, segmentation_model_urls
-from deep_learning.dp_support import IntermediateLayerGetter, download_pretrained_model, load_module
+from deep_learning.dp_support import IntermediateLayerGetter, download_pretrained_model, load_module, load_pretrained_weights
 from deep_learning.hander.classification_header import ClassificationHead
 from deep_learning.classification.vgg import vgg16,vgg19
 from torch import flatten
-#https://blog.csdn.net/weixin_43500354/article/details/124867082
+#refer to: https://blog.csdn.net/weixin_43500354/article/details/124867082
+#https://blog.csdn.net/m0_56294205/article/details/134988745
 
 class VGGFCN(nn.Module):
     def __init__(self, num_classes: int, backbone, stride : int = 32, classification_task: bool = False):
@@ -52,19 +53,12 @@ class VGGFCN(nn.Module):
             nn.ReLU()
         )
         # 转置卷积层3
-        # self.transpose_conv3 = nn.Sequential(
-        #     nn.ConvTranspose2d(num_classes, num_classes,kernel_size=16,stride=8,padding=4),
-        #     nn.BatchNorm2d(num_classes),
-        #     nn.ReLU()
-        # )
         self.transpose_conv3 = nn.Sequential(
             nn.ConvTranspose2d(num_classes, num_classes, kernel_size=8, stride=4, padding=2),  # Adjusted kernel size and stride
             nn.BatchNorm2d(num_classes),
             nn.ReLU()
         )
 
-
-  
     def forward(self, x):
         result = OrderedDict()  
         output = self.backbone(x)
@@ -116,37 +110,18 @@ class FCN(nn.Module):
             result["cls"] = self.classification_header(x)
 
         x = self.classifier(x)                                                                  # 将out输出提取并送入主分类器中
-        # 原论文中虽然使用的是ConvTranspose2d，但权重是冻结的，所以就是一个bilinear插值
         x = F.interpolate(x, size=input_shape, mode='bilinear', align_corners=False)            # 通过双线性插值还原到原少shape
         result["out"] = x                                                                       # 结果存到字典中
  
         if self.aux_classifier is not None:
             x = features["aux"]
             x = self.aux_classifier(x)
-            # 原论文中虽然使用的是ConvTranspose2d，但权重是冻结的，所以就是一个bilinear插值
             x = F.interpolate(x, size=input_shape, mode='bilinear', align_corners=False)
             result["aux"] = x                                                                   # 辅助分类器的结果
 
         return result
  
 
-
-
-
-def load_pretrained_weights(model, model_url, num_classes):
-    """
-    Load and modify pretrained weights as needed for different number of classes.
-    """
-    model_path_name = download_pretrained_model(model_url)
-    weights_dict = load_module(model_path_name)
-    if num_classes != 21:
-        for k in list(weights_dict.keys()):
-            if "classifier.4" in k:
-                del weights_dict[k]
-    missing_keys, unexpected_keys = model.load_state_dict(weights_dict, strict=False)
-    if len(missing_keys) != 0 or len(unexpected_keys) != 0:
-        print("Missing keys: ", missing_keys)
-        print("Unexpected keys: ", unexpected_keys)
 
  
 def create_fcn_model(backbone_type, aux, num_classes, pretrained=False, classification_task=False, batch_norm=True):

@@ -8,8 +8,9 @@ from torch.nn import functional as F
 from torchinfo import summary
 from deep_learning.hander import segmentation_hander
 from deep_learning.classification.resnet import ResNet_50, ResNet_101
-from deep_learning.dp_support import IntermediateLayerGetter, download_pretrained_model, load_module
+from deep_learning.dp_support import IntermediateLayerGetter, download_pretrained_model, load_module, load_pretrained_weights
 from deep_learning.hander.classification_header import ClassificationHead
+
 segmentation_model_urls = {
     'resnet50': 'https://download.pytorch.org/models/deeplabv3_resnet50_coco-cd0a2569.pth',
     'resnet101': 'https://download.pytorch.org/models/deeplabv3_resnet101_coco-586e9e4e.pth',
@@ -121,22 +122,6 @@ class DeepLabHead(nn.Sequential):
             nn.Conv2d(256, num_classes, 1)
         )
 
-
-
-def load_pretrained_weights(model, model_url, num_classes):
-    """
-    Load and modify pretrained weights as needed for different number of classes.
-    """
-    model_path_name = download_pretrained_model(model_url)
-    weights_dict = load_module(model_path_name)
-    if num_classes != 21:
-        for k in list(weights_dict.keys()):
-            if "classifier.4" in k:
-                del weights_dict[k]
-    missing_keys, unexpected_keys = model.load_state_dict(weights_dict, strict=False)
-    if len(missing_keys) != 0 or len(unexpected_keys) != 0:
-        print("Missing keys: ", missing_keys)
-        print("Unexpected keys: ", unexpected_keys)
 
  
 def create_deeplab_model(backbone_type, aux, num_classes, pretrained=False, classification_task=False):
