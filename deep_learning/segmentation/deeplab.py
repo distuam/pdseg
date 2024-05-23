@@ -140,9 +140,7 @@ def load_pretrained_weights(model, model_url, num_classes):
 
  
 def create_deeplab_model(backbone_type, aux, num_classes, pretrained=False, classification_task=False):
-    """
-    Create a FCN model based on a specified backbone.
-    """
+
     print("Backbone_type:",backbone_type)
     if backbone_type == 'resnet50':
         backbone = ResNet_50(pretrained=pretrained, replace_stride_with_dilation=[False, True, True])

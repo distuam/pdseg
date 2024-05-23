@@ -10,6 +10,9 @@ from torch import Tensor
 import torch.optim as optim
 import random
 
+mean = [0.485, 0.456, 0.406]
+std = [0.229, 0.224, 0.225]
+
 def save_model_state(module, optimizer, epoch, save_path, **kwargs):
     """
     Saves the model state to a specified path.

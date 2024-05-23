@@ -6,17 +6,12 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from collections import defaultdict
-from deep_learning.dp_support import save_model_state
+from deep_learning.dp_support import denormalize, save_model_state
+from deep_learning.learning_rate import print_learning_rate
 from performance import calculate_metrics, print_metrics_table
 mean = [0.485, 0.456, 0.406]
 std = [0.229, 0.224, 0.225]
 
-
-def denormalize(tensor, mean, std):
-    """对张量进行反归一化"""
-    mean = torch.tensor(mean).view(3, 1, 1)  # 将均值转换为适当的形状
-    std = torch.tensor(std).view(3, 1, 1)    # 将标准差转换为适当的形状
-    return tensor * std + mean
 
 
 def decode_segmentation_mask(mask: np.ndarray, color_map: dict, name: str):
@@ -34,12 +29,6 @@ def decode_segmentation_mask(mask: np.ndarray, color_map: dict, name: str):
     # print(analyze_mask_classes(replaced_image),mask.shape)
     return replaced_image
 
-def print_learning_rate(optimizer):
-
-    # Update the learning rate for all parameter groups in the optimizer
-    for param_group in optimizer.param_groups:
-        print(f"Learning rate: {param_group['lr']}")
-        break
 
 def my_criterion(inputs, target, classification_label):
     total_loss = 0
