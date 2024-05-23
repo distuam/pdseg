@@ -14,3 +14,5 @@ deep_learning/segmentation/result contains the experimental results based on CNN
 other/preprocessing.py is for creating dataset splitting files for binary or multi-class classification.
 
 other/mmseg_preprocessing.py is for creating dataset splitting files for binary or multi-class classification for MMsegmentation.
+
+main funtion in deep_learning/segmentation/run.py
